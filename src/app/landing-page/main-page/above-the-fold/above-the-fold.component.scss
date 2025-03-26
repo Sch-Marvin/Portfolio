@@ -66,20 +66,34 @@ section {
   }
 }
 
-.logo-Name-Section{
+.logo-Name-section{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.logo-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+flex-wrap: wrap;
+}
+
+.titel-container{
+  display: flex;
+  flex-direction: column;
+}
+  .contact-Icon{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 683px;
-}
-.logo-Section{
-    padding-bottom: 10%;
-}
-
-.logo{
-
-}
+    gap: 5px;
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
 
 
 h1{
@@ -89,12 +103,113 @@ h1{
 h2{
     text-align: center;
     font-size: 40px;
-}
+    font-family: 'JS';
 
-h3,h4{
-    font-family: 'Courier New', Courier, monospace;
+  }
+
+h3{
+  font-family: 'Anta Regular';
+  font-size: 16px;
 }
 
 h4{
-    color: gray;
+    color: #89BCD9;
+    font-family: 'JS Light';
+
+}
+
+
+
+.profil-Img {
+  position: relative;
+  width: 535px;
+  height: 683px;
+
+  .subject-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .shape-One,
+  .shape-two {
+    background-position: center bottom;
+    position: absolute;
+    background-size: cover;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+  }
+  .shape-One {
+    background-image: url("../../../../assets/img/shape.png");
+    opacity: 1;
+    position: absolute;
+    top: 20px;
+    width: 580px;
+    height: 683px;
+    transform: rotate(15deg);
+    clip-path: none;
+    border-radius: 100%;  
+  }
+  .shape-two {
+    background-image: url("../../../../assets/img/shape2.png");
+    opacity: 0;
+    position: absolute;
+    top: 20px;
+    width: 580px;
+    height: 683px;
+    transform: rotate(35deg);
+    clip-path: none;
+    border-radius: 100%;
+  }
+
+  &:hover {
+    .shape-One {
+      opacity: 0;
+    }
+
+    .shape-two {
+      opacity: 1;
+    }
+  }
+}
+
+.logo-container {
+  position: relative;
+  width: 56px;
+  height: 38px; 
+
+  .logo-1, 
+  .logo-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .logo-1 {
+    opacity: 1;
+  }
+
+  .logo-2 {
+    opacity: 0;
+  }
+
+  &:hover {
+    .logo-1 {
+      opacity: 0;
+    }
+
+    .logo-2 {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.scroll-section{
+
 }
