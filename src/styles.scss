@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  max-width: 1440px;
+}
+body{
+  background-color: #262e34;
+  font-family: 'Anta';
+}
+
+@font-face {
+  font-family: 'Anta';
+  src: url(./assets/fonts/Anta/Anta-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+  @font-face {
+    font-family: 'JS';
+    src: url('./assets/fonts/Anta/Anta-Regular.ttf'),
+         url('./assets/fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }

@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
-export class AboveTheFoldComponent {
 
+
+export class AboveTheFoldComponent {
+  title = 'Hover Effect';
+  description = 'Hover over this section to change the background image.';
 }
+
+

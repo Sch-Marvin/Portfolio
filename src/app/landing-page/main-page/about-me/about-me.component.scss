@@ -1,0 +1,39 @@
+* {
+  background-color: #262e34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 328px;
+  width: 860px;
+}
+
+h2 {
+  font-size: 72px;
+  color: #89bcd9;
+}
+
+.section-text{
+display: flex;
+flex-direction: row;
+}
+
+span{
+    color: #89bcd9;
+}
+button{
+    border-radius: 30px;
+    height: 48px;
+    width: 134px;
+    background-color: #262e34;
+    color: #89bcd9;
+    border-color:#89bcd9;
+    border-style: solid;
+}

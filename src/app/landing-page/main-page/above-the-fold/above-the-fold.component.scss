@@ -1,0 +1,100 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262e34;
+  height: 100%;
+  width: 100%;
+  color: #F8F5EC;
+}
+section {
+  width: 1214px;
+  display: flex;
+  justify-content: space-between;
+}
+.profil-Img {
+  position: relative;
+  width: 535px;
+  height: 683px;
+
+  .subject-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  .shape-One,
+  .shape-two {
+    background-position: center bottom;
+    position: absolute;
+    background-size: cover;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+  }
+  .shape-One {
+    background-image: url("../../../../assets/img/shape.png");
+    opacity: 1;
+    position: absolute;
+    top: 20px;
+    width: 580px;
+    height: 683px;
+    transform: rotate(15deg);
+    clip-path: none;
+    border-radius: 100%;  
+  }
+  .shape-two {
+    background-image: url("../../../../assets/img/shape2.png");
+    opacity: 0;
+    position: absolute;
+    top: 20px;
+    width: 580px;
+    height: 683px;
+    transform: rotate(35deg);
+    clip-path: none;
+    border-radius: 100%;
+  }
+
+  &:hover {
+    .shape-One {
+      opacity: 0;
+    }
+
+    .shape-two {
+      opacity: 1;
+    }
+  }
+}
+
+.logo-Name-Section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 683px;
+}
+.logo-Section{
+    padding-bottom: 10%;
+}
+
+.logo{
+
+}
+
+
+h1{
+    font-size: 88px;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+h3,h4{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h4{
+    color: gray;
+}
