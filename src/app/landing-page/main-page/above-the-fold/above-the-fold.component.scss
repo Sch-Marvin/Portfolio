@@ -66,127 +66,43 @@ section {
   }
 }
 
-.logo-Name-section{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-}
+.logo-Name-section {  
 
-.logo-section{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-flex-wrap: wrap;
-}
-
-.titel-container{
   display: flex;
   flex-direction: column;
-}
-  .contact-Icon{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    img{
-      width: 30px;
-      height: 30px;
-    }
-  }
-
-
-h1{
-    font-size: 88px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
 }
 
-h2{
-    text-align: center;
-    font-size: 40px;
-    font-family: 'JS';
-
-  }
-
-h3{
-  font-family: 'Anta Regular';
-  font-size: 16px;
+.logo-section {
+  width: 630px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 230px;
 }
 
-h4{
-    color: #89BCD9;
-    font-family: 'JS Light';
-
-}
-
-
-
-.profil-Img {
-  position: relative;
-  width: 535px;
-  height: 683px;
-
-  .subject-img {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
-  .shape-One,
-  .shape-two {
-    background-position: center bottom;
-    position: absolute;
-    background-size: cover;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 1;
-  }
-  .shape-One {
-    background-image: url("../../../../assets/img/shape.png");
-    opacity: 1;
-    position: absolute;
-    top: 20px;
-    width: 580px;
-    height: 683px;
-    transform: rotate(15deg);
-    clip-path: none;
-    border-radius: 100%;  
-  }
-  .shape-two {
-    background-image: url("../../../../assets/img/shape2.png");
-    opacity: 0;
-    position: absolute;
-    top: 20px;
-    width: 580px;
-    height: 683px;
-    transform: rotate(35deg);
-    clip-path: none;
-    border-radius: 100%;
-  }
-
-  &:hover {
-    .shape-One {
-      opacity: 0;
-    }
-
-    .shape-two {
-      opacity: 1;
-    }
-  }
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
 }
 
 .logo-container {
   position: relative;
   width: 56px;
-  height: 38px; 
+  height: 38px;
 
   .logo-1, 
   .logo-2 {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.1s all;
   }
 
   .logo-1 {
@@ -208,8 +124,63 @@ h4{
   }
 }
 
-
-
-.scroll-section{
-
+.titel-container {
+  text-align: center;
+  margin-top: 8px;
 }
+
+.name-Section {
+  text-align: center;
+}
+
+h1 {
+  font-size: 88px;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'JS';
+
+  }
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'JS';
+}
+
+h3 {
+  font-family: 'Anta Regular';
+  font-size: 16px;
+}
+
+h4 {
+  color: #89BCD9;
+  font-family: 'JS Light';
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  
+  img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+}
+
+.scroll-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  img {
+    width: 38px;
+    height: 89px;
+    cursor: pointer;
+  }
+}
+

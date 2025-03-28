@@ -1,43 +1,61 @@
 <header>
-    <section>
-        <div class="profil-Img">
-            <img src="../../../../assets/img/subject 3.png" alt="My Image" class="subject-img">
+  <section>
+    <div class="profil-Img">
+      <img
+        src="../../../../assets/img/subject-3.png"
+        alt="My Image"
+        class="subject-img"
+      />
 
-            <div class="shape-One"></div>
-            <div class="shape-two"></div>
-        </div>
+      <div class="shape-One"></div>
+      <div class="shape-two"></div>
+    </div>
 
-        <div class="logo-Name-section">
-            <div class="logo-section">
-                <div class="logo-container">
-                    <img class="logo-1" src="../../../../assets/icon/Logo icon1.png" alt="Logo-1">
-                    <img class="logo-2" src="../../../../assets/icon/Logo icon2.png" alt="Logo-2">
-                </div>
-
-                    <div class="titel-container">
-                        <h3>M.Schneemann</h3>
-                        <h4>developer</h4>
-                    </div>
+    <div class="logo-Name-section">
+        <div class="logo-section">
           
-                    <span class="contact-Icon">
-                        <img src="../../../../assets/icon/Email button.png" alt="E-Mail Icon">
-                        <img src="../../../../assets/icon/Github button.png" alt="GitHub Icon">
-                        <img src="../../../../assets/icon/Linkedin button.png" alt="LinkdIn Icon">
-                    </span>
+          <div class="left-section">
+            <div class="logo-container">
+              <img class="logo-1" src="../../../../assets/icon/Logo icon1.png" alt="Logo-1"/>
+              <img class="logo-2" src="../../../../assets/icon/Logo icon2.png" alt="Logo-2"/>
             </div>
-
-
-
-            <div class="name-Section">
-                <h1>M.Schneemann</h1>
-                <h2>FRONTEND DEVELOPER</h2>
+      
+            <div class="titel-container">
+              <h3>M.Schneemann</h3>
+              <h4>developer</h4>
             </div>
-
-            <div class="scroll-Section">
-                <span>
-                    <img src="../../../../assets/icon/Arrow down.png" alt="Scroll Icon">
-                </span>
-            </div>
+          </div>
+      
+          <div class="contact-icons">
+            <span *ngFor="let icon of contactIcons">
+              <img [src]="icon.current" (mouseenter)="onContactHover(icon.id)"(mouseleave)="onContactLeave(icon.id)" [alt]="icon.id + ' icon'"/>
+            </span>
+          </div>
+          
+          
+      
         </div>
-    </section>
+      
+        <div class="name-Section">
+          <h1>M.Schneemann</h1>
+          <h2>FRONTEND DEVELOPER</h2>
+        </div>
+      
+        <div class="scroll-section">
+            <span *ngFor="let scroll of scrollIcons">
+              <img [src]="scroll.current" (mouseenter)="onScrollHover(scroll.id)" (mouseleave)="onScrollLeave(scroll.id)" [alt]="scroll.id + ' icon'"/>
+            </span>
+          </div>
+          
+
+
+
+      </div>
+      
+      
+  </section>
 </header>
+
+
+
+
