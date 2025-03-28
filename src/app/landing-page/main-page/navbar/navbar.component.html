@@ -1,9 +1,17 @@
-<div class="navbar" [ngClass]="{ 'fixed': isFixed, 'original': isOriginal }">
+<div class="navbar" [ngClass]="{ fixed: isFixed, original: isOriginal }">
   <div class="logo-section">
     <div class="left-section">
       <div class="logo-container">
-        <img class="logo-1" src="../../../../assets/icon/Logo icon-Dark.png" alt="Logo-1" />
-        <img class="logo-2" src="../../../../assets/icon/Logo icon-Dark 2.png" alt="Logo-2" />
+        <img
+          class="logo-1"
+          src="../../../../assets/icon/Logo icon-Dark.png"
+          alt="Logo-1"
+        />
+        <img
+          class="logo-2"
+          src="../../../../assets/icon/Logo icon-Dark 2.png"
+          alt="Logo-2"
+        />
       </div>
       <div class="titel-container">
         <h3>M.Schneemann</h3>
@@ -11,12 +19,20 @@
       </div>
     </div>
   </div>
-  <nav>
-    <p><a href="#why-me">Why me</a></p>
-    <p><a href="#">Skills</a></p>
-    <p><a href="#">Projects</a></p>
-    <p><a href="#">Contact</a></p>
-  </nav>
+  <div class="navbar-link">
+
+    <nav class="navbar-text">
+
+      <p (click)="toggleBackground('item1'); scrollToSection('about-me')" [class.active-background]="selectedItem === 'item1'">Why me</p>
+      <p (click)="toggleBackground('item2'); scrollToSection('abilities')" [class.active-background]="selectedItem === 'item2'">Skills</p>
+      <p (click)="toggleBackground('item3'); scrollToSection('project')" [class.active-background]="selectedItem === 'item3'">Projects</p>
+      <p (click)="toggleBackground('item4'); scrollToSection('contact')" [class.active-background]="selectedItem === 'item4'">Contact</p>
+      
+    </nav> 
+    
+    
+   
+  </div>
   <div class="language-switch">
     <span>DE</span>
     <div class="switch">

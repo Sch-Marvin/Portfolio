@@ -1,12 +1,31 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { DaBubbleComponent } from './da-bubble/da-bubble.component'; 
+import { GameComponent } from './game/game.component'; 
+import { JoinComponent } from './join/join.component'; 
+import { OngoingProjectComponent } from './ongoing-project/ongoing-project.component'; 
 
 @Component({
   selector: 'app-my-projects',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule,
+    DaBubbleComponent,
+    GameComponent,
+    JoinComponent,
+    OngoingProjectComponent
+  ],
   templateUrl: './my-projects.component.html',
-  styleUrl: './my-projects.component.scss'
+  styleUrls: ['./my-projects.component.scss']
 })
 export class MyProjectsComponent {
+  tab = 0;
 
+  selectedTab() {
+    return this.tab;
+  }
+
+  selectTab(tab: number) {
+    this.tab = tab;
+  }
 }

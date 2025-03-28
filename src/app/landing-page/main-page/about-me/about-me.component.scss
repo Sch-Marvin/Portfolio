@@ -1,39 +1,96 @@
-* {
-  background-color: #262e34;
+.about-me-content {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  color: white;
+  align-items: center;
+  max-width: 1440px;
+  height: 307px;
+}
+section {
+  scroll-margin-top: 150px; 
+}
+.section-text {
+  display: flex;
 }
 
 section {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 328px;
+  margin-top: 50px;
   width: 860px;
+  height: 307px;
 }
 
 h2 {
-  font-size: 72px;
-  color: #89bcd9;
+  font-size: 60px;
+  font-family: "Anta Regular";
+  text-shadow: none;
+  color: #6bb1e9;
+  margin-bottom: 1.5rem;
 }
 
-.section-text{
-display: flex;
-flex-direction: row;
+span {
+  font-family: "JS Bold";
+  padding-right: 5px;
+}
+p {
+  font-family: "JS Medium";
 }
 
-span{
-    color: #89bcd9;
+.section-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 57px;
+  width: 416px;
 }
-button{
-    border-radius: 30px;
-    height: 48px;
-    width: 134px;
-    background-color: #262e34;
-    color: #89bcd9;
-    border-color:#89bcd9;
-    border-style: solid;
+
+img {
+  width: 35px;
+  height: 30px;
+  padding-right: 13px;
+}
+
+.located {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.located span {
+  font-weight: bold;
+  color: #6bb1e9;
+}
+
+.about-me-text {
+  max-width: 379px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+}
+.button {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 24px;
+}
+
+button {
+  background: transparent;
+  border: 2px solid #6bb1e9;
+  color: #6bb1e9;
+  padding: 10px 20px;
+  font-family: "JS Regular";
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #89bcd95f;
+  color: #1e242b;
 }

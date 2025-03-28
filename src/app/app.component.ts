@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { HighlightBackgroundDirective } from './highlight-background.directive';
 
 
 @Component({

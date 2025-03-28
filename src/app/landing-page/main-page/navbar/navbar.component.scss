@@ -1,4 +1,5 @@
 .navbar {
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,11 +10,14 @@
   &.fixed {
     position: fixed;
     top: 0px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
+
   &.original {
     width: 1222px;
     top: 683px;
+    left: 0;
   }
 }
 .logo {
@@ -28,35 +32,40 @@
     font-size: 0.9rem;
   }
 }
-nav {
+
+.navbar-text {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
   align-items: center;
+  gap: 5rem;
   p {
+    text-align: center;
+    text-rendering: auto;
     margin: 0;
-    a {
-      text-decoration: none;
-      font-family: "JS Medium";
-      color: #262e34;
-      font-size: 1.63rem;
-      &:hover {
-        text-decoration: underline;
-      }
+    text-decoration: none;
+    list-style: none;
+    font-family: "JS Medium";
+    color: #262e34;
+    font-size: 1.63rem;
+    width: 100px;
+    &:hover {
+      color: #fff;
+      cursor: pointer;
     }
   }
 }
+
 .language-switch {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   .switch {
-    background-color: #fff;
+    background-color: #fff !important;
     border-radius: 999px;
     padding: 0.2rem 0.6rem;
     cursor: pointer;
   }
 }
+
 .left-section {
   display: flex;
   flex-direction: column;
@@ -94,3 +103,28 @@ nav {
   text-align: center;
   margin-top: 8px;
 }
+
+.navbar-link {
+  width: 677px;
+  display: flex;
+  justify-content: center;
+}
+
+p.active-background {
+  background-image: url('../../../../assets/icon/button\ pressed\ small.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 56px;
+}
+
+p.active {
+  color: #ffffff !important;
+}
+
+

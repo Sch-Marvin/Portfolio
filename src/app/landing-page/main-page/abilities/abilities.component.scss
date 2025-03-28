@@ -1,0 +1,122 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section{
+  scroll-margin-top: 100px;
+}
+.content {
+  margin-top: 104px;
+  width: 869px;
+  height: 556px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  padding-right: 40px;
+  margin-bottom: 40px;
+}
+.my-skills {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 80px;
+}
+
+h2 {
+  font-size: 60px;
+  font-family: "Anta Regular";
+  text-shadow: none;
+  color: #6bb1e9;
+  text-align: center;
+}
+
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); // 4 Spalten für die Icons
+  gap: 40px; // Abstand zwischen den Icons
+  width: 409px;
+  height: 404px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+p {
+  font-family: "JS Regular";
+  color: #89bcd9;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.about-to-text {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.learning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 375px;
+  height: 391px;
+  background-image: url("../../../../assets/icon/MySkill/Ellipse\ 25.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.learning-icon {
+  display: flex;
+  gap: 24px;
+  margin: 19px 0 19px 0;
+  img {
+    width: 32px;
+    height: 32px;
+  }
+  p {
+    font-size: 14px;
+    font-family: "JS Regular";
+  }
+}
+
+span {
+  font-family: 'JS Regular';
+  font-size: 18px;
+  color: #f8f5ec;
+  text-align: center;
+}
+
+.currently{
+  width: 194px;
+  height: 23px;
+}
+
+.learning-text{
+  width: 307px;
+  height: 105px;
+  text-align: center;
+}

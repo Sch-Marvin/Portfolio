@@ -1,31 +1,37 @@
-<section>
-
+<section id="abilities">
+  <div class="content">
     <h2>My Skills</h2>
-   <div>
 
-       <span>
-           <img src="../../../../assets/icon/MySkill/Angular.png" alt="">
-           <img src="../../../../assets/icon/MySkill/TS.png" alt="">
-           <img src="../../../../assets/icon/MySkill/JS.png" alt="">
-           <img src="../../../../assets/icon/MySkill/HTML.png" alt="">
-           <img src="../../../../assets/icon/MySkill/CSS.png" alt="">
-           <img src="../../../../assets/icon/MySkill/Api.png" alt="">
-           <img src="../../../../assets/icon/MySkill/Firebase.png" alt="">
-           <img src="../../../../assets/icon/MySkill/GIT.png" alt="">
-           <img src="../../../../assets/icon/MySkill/Meterial-Design.png" alt="">
-           <img src="../../../../assets/icon/MySkill/Scrum.png" alt="">
+    <div class="my-skills">
+      <div class="skill-container">
+        @for (skill of skills; track skill){
+
+        <div class="skill">
+          <img class="icon-img" [src]="skill.src" [alt]="skill.alt" />
+          <p>{{ skill.alt }}</p>
+        </div>
+        }
+      </div>
+
+      <div class="learning">
+        <span class="about-to-text">
+          <span class="currently"> I am currently learning </span>
+
+          <div class="learning-icon">
+            @for (item of learning; track item) {
+            <div>
+              <img [src]="item.src" [alt]="item.alt" />
+              <p>{{ item.alt }}</p>
+            </div>
+            }
+          </div>
+
+          <span class="learning-text">
+            Show that you are motivated to continually improve your skills,
+            implement innovative solutions and stay abreast of new technologies.
+          </span>
         </span>
-       
-        <div>
-            
-            <img src="./../../../../assets/icon/MySkill/Ellipse 25.png" alt="">
-            
-            
-            <span>
-
-            </span>
-        </div>   
+      </div>
     </div>
-
-
+  </div>
 </section>

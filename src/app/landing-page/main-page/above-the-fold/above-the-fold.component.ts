@@ -39,4 +39,33 @@ export class AboveTheFoldComponent {
     const icon = this.scrollIcons.find(i => i.id === id);
     if (icon) icon.current = icon.default;
   }
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+      setTimeout(() => {
+        this.smoothBounce(-20, 200);
+      }, 500);
+    }
+  }
+  
+  smoothBounce(offset: number, duration: number) {
+    const start = window.scrollY;
+    const startTime = performance.now();
+    const animate = (currentTime: number) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1); // Fortschritt von 0 bis 1
+      const easeOut = 1 - Math.pow(1 - progress, 3); // Weiche Ease-Out-Bewegung
+      window.scrollTo(0, start + offset * easeOut);
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+    requestAnimationFrame(animate);
+  }
 }
+

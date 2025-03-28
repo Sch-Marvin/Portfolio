@@ -1,0 +1,103 @@
+.overlay {
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    .feedback-card {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+      h3,
+      h5,
+      .project-name,
+      a {
+        position: relative;
+        z-index: 2; // Inhalte über den Bildern
+      }
+      &:hover {
+        .feedback-card-one {
+          opacity: 0;
+        }
+        .feedback-card-two {
+          opacity: 1;
+        }
+      }
+    }
+    .feedback-card-one,
+    .feedback-card-two {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background-image: url("../../../../assets/icon/Ellipse 02.png");
+      background-position: center bottom;
+      background-size: cover;
+      border-radius: 100%;
+      transition: opacity 0.5s ease-in-out;
+      clip-path: none;
+      z-index: 1; // Bilder im Hintergrund
+    }
+    .feedback-card-one {
+      transform: rotate(15deg);
+      opacity: 1;
+    }
+    .feedback-card-two {
+      transform: rotate(35deg);
+      opacity: 0;
+    }
+  }
+  h2 {
+    padding-top: 79px;
+    padding-bottom: 56px;
+    font-size: 32px;
+    font-family: "JS Regular";
+    color: #89bcd9;
+    text-align: center;
+    text-shadow: none;
+  }
+  h3 {
+    font-size: 26px;
+    font-family: "JS SemiBold";
+  }
+  h5 {
+    font-family: "JS Regular";
+    font-size: 18px;
+    color: #89bcd9;
+    display: flex;
+    padding-bottom: 19px;
+  }
+  p {
+    color: #f8f5ec;
+    padding-right: 5px;
+    text-align: center;
+    width: 292px;
+    height: 121px;
+  }
+  .project-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+  }
+  span {
+    padding-right: 5px;
+    color: #f8f5ec;
+    padding-bottom: 8px;
+  }
+  a {
+    font-family: "JS Regular";
+    font-size: 16px;
+    color: #89bcd9;
+  
+    &:hover {
+      cursor: pointer;
+    color: #F8F5EC;
+    }
+  }
+  

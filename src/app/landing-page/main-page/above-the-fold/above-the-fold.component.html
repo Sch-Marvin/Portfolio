@@ -38,7 +38,7 @@
       
         <div class="scroll-section">
             <span *ngFor="let scroll of scrollIcons">
-              <img [src]="scroll.current" (mouseenter)="onScrollHover(scroll.id)" (mouseleave)="onScrollLeave(scroll.id)" [alt]="scroll.id + ' icon'"/>
+              <img (click)="scrollToSection('about-me')"  [src]="scroll.current" (mouseenter)="onScrollHover(scroll.id)" (mouseleave)="onScrollLeave(scroll.id)" [alt]="scroll.id + ' icon'"/>
             </span>
           </div>
           

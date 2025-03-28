@@ -5,13 +5,16 @@ import { AbilitiesComponent } from "./abilities/abilities.component";
 import { MyProjectsComponent } from "./my-projects/my-projects.component";
 import { ContactMeComponent } from "./contact-me/contact-me.component";
 import { NavbarComponent } from './navbar/navbar.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { FooterComponent  } from '../../footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [AboveTheFoldComponent, AboutMeComponent, AbilitiesComponent, MyProjectsComponent, ContactMeComponent, NavbarComponent, CommonModule ],
+  imports: [AboveTheFoldComponent, FooterComponent, RouterOutlet, FeedbackComponent, AboutMeComponent, AbilitiesComponent, MyProjectsComponent, ContactMeComponent, NavbarComponent, CommonModule, ],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss'
 })

@@ -1,35 +1,29 @@
 * {
   margin: 0;
   scroll-behavior: smooth;
-  max-width: 1440px;
 }
-html {
+
+body {
+  background-color: #262e34;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-body {
-  background-color: #262e34;
+  min-height: 100vh;
+  margin: 0;
 }
 h1 {
   font-family: "Anta Regular";
   font-size: 5.5rem;
   color: #f8f5ec;
-  text-shadow: 
-    1px 1px 0 black,  
-   -1px -1px 0 black,  
-    1px -1px 0 black,  
-   -1px 1px 0 black;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black,
+    -1px 1px 0 black;
 }
 h2 {
   font-family: "JS Regular";
   font-size: 2.5rem;
   color: #f8f5ec;
-  text-shadow: 
-    1px 1px 0 black,  
-   -1px -1px 0 black,  
-    1px -1px 0 black,  
-   -1px 1px 0 black;
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black,
+    -1px 1px 0 black;
 }
 
 h3 {
