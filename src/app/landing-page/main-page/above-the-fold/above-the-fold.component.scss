@@ -67,7 +67,6 @@ section {
 }
 
 .logo-Name-section {  
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,7 +74,6 @@ section {
   text-align: center;
   gap: 20px;
 }
-
 .logo-section {
   width: 630px;
   display: flex;
@@ -83,7 +81,6 @@ section {
   justify-content: flex-end;
   gap: 230px;
 }
-
 .left-section {
   display: flex;
   flex-direction: column;
@@ -91,12 +88,10 @@ section {
   text-align: center;
   gap: 5px;
 }
-
 .logo-container {
   position: relative;
   width: 56px;
   height: 38px;
-
   .logo-1, 
   .logo-2 {
     position: absolute;
@@ -104,20 +99,16 @@ section {
     height: 100%;
     transition: opacity 0.1s all;
   }
-
   .logo-1 {
     opacity: 1;
   }
-
   .logo-2 {
     opacity: 0;
   }
-
   &:hover {
     .logo-1 {
       opacity: 0;
     }
-
     .logo-2 {
       opacity: 1;
     }
@@ -133,38 +124,11 @@ section {
   text-align: center;
 }
 
-h1 {
-  font-size: 88px;
-}
-
-h2{
-    text-align: center;
-    font-size: 40px;
-    font-family: 'JS';
-
-  }
-h2 {
-  text-align: center;
-  font-size: 40px;
-  font-family: 'JS';
-}
-
-h3 {
-  font-family: 'Anta Regular';
-  font-size: 16px;
-}
-
-h4 {
-  color: #89BCD9;
-  font-family: 'JS Light';
-}
-
 .contact-icons {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  
   img {
     width: 30px;
     height: 30px;

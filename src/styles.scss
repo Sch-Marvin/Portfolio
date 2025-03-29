@@ -1,22 +1,99 @@
 * {
   margin: 0;
+  scroll-behavior: smooth;
   max-width: 1440px;
 }
-body{
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
   background-color: #262e34;
-  font-family: 'Anta';
+}
+h1 {
+  font-family: "Anta Regular";
+  font-size: 5.5rem;
+  color: #f8f5ec;
+  text-shadow: 
+    1px 1px 0 black,  
+   -1px -1px 0 black,  
+    1px -1px 0 black,  
+   -1px 1px 0 black;
+}
+h2 {
+  font-family: "JS Regular";
+  font-size: 2.5rem;
+  color: #f8f5ec;
+  text-shadow: 
+    1px 1px 0 black,  
+   -1px -1px 0 black,  
+    1px -1px 0 black,  
+   -1px 1px 0 black;
 }
 
+h3 {
+  font-family: "Anta Regular";
+  font-size: 1rem;
+  color: #f8f5ec;
+}
+
+h4 {
+  font-size: 1rem;
+  font-family: "JS Light";
+  color: #262e34;
+}
+
+//font family: Anta
 @font-face {
-  font-family: 'Anta';
-  src: url(./assets/fonts/Anta/Anta-Regular.ttf);
+  font-family: "Anta Regular";
+  src: url(././assets/fonts/Anta/Anta-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
-  @font-face {
-    font-family: 'JS';
-    src: url('./assets/fonts/Josefin_Sans/static/JosefinSans-Light.ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
+//font family: Josefin Sans
+@font-face {
+  font-family: "JS Regular";
+  src: url("./assets/fonts/Josefin Sans/JosefinSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JS Medium";
+  src: url("./assets/fonts/Josefin Sans/JosefinSans-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JS Light";
+  src: url("./assets/fonts/Josefin Sans/JosefinSans-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JS Bold";
+  src: url("./assets/fonts/Josefin Sans/JosefinSans-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JS SemiBold";
+  src: url("./assets/fonts/Josefin Sans/JosefinSans-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//font family: Roboto Mono
+@font-face {
+  font-family: "RM Medium";
+  src: url("./assets/fonts/Roboto Mono/RobotoMono-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RM Regular";
+  src: url("./assets/fonts/Roboto Mono/RobotoMono-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
