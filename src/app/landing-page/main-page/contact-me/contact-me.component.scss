@@ -1,15 +1,36 @@
 h2 {
-    text-align: center;
-    font-family: "Anta Regular";
-    line-height: 120%;
-    font-size: 60px;
-    text-shadow: none;
-    color: #6bb1e9;
-    padding-top: 103px;
-    padding-bottom: 80px;
-  }
+  text-align: center;
+  font-family: "Anta Regular";
+  line-height: 120%;
+  font-size: 60px;
+  text-shadow: none;
+  color: #6bb1e9;
+  padding-top: 103px;
+  padding-bottom: 80px;
+}
 
-  section {
-    scroll-margin-top: 100px; /* Stellt sicher, dass 80px Platz bleibt */
-  }
-  
+section {
+  scroll-margin-top: 100px;
+}
+
+label {
+  font-size: 14px;
+  font-family: "Quantico-Regular";
+  color: #89bcd9;
+  display: flex;
+  align-items: center;
+
+}
+input {
+  width: 445px;
+  border-radius: 100px;
+  height: 60px;
+  background-color: #262e34;
+  border-color: #6bb1e9;
+  border-style: solid;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+}

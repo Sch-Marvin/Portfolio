@@ -11,5 +11,6 @@ export const appConfig = {
         scrollPositionRestoration: 'enabled',
       })
     ),
+    provideHttpClient() // <-- Diese Zeile ergänzt den HttpClient
   ],
 };
