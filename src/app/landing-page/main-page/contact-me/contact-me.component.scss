@@ -1,36 +1,189 @@
-h2 {
-  text-align: center;
-  font-family: "Anta Regular";
-  line-height: 120%;
-  font-size: 60px;
-  text-shadow: none;
-  color: #6bb1e9;
-  padding-top: 103px;
-  padding-bottom: 80px;
+/* Allgemein */
+body {
+  background-color: #131d23;
+  font-family: "Quantico-Regular", sans-serif;
+  color: white;
 }
 
-section {
-  scroll-margin-top: 100px;
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-text {
+  max-width: 429px;
+  height: 124px;
+  text-align: start;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+}
+
+/* Formular Layout */
+form {
+  width: 911px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
 }
 
 label {
-  font-size: 14px;
-  font-family: "Quantico-Regular";
+  padding-left: 40px;
   color: #89bcd9;
-  display: flex;
-  align-items: center;
-
-}
-input {
-  width: 445px;
-  border-radius: 100px;
-  height: 60px;
-  background-color: #262e34;
-  border-color: #6bb1e9;
-  border-style: solid;
+  font-family: "JS Regular";
+  font-size: 14px;
 }
 
 .input-label {
   display: flex;
   flex-direction: column;
+}
+
+.textarea-label {
+  width: 100%;
+  max-width: 911px;
+}
+
+input,
+textarea {
+  background-color: #262e34;
+  border: 1px solid #6bb1e9;
+  color: white;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  padding: 12px 20px;
+}
+
+/* Input Styles */
+input {
+  width: 445px;
+  height: 60px;
+  border-radius: 100px;
+}
+
+/* Textarea Style */
+textarea {
+  width: 100%;
+  height: 146px;
+  border-radius: 25px;
+  resize: none;
+}
+
+/* Fokus-Effekt */
+input:focus,
+textarea:focus {
+  background-color: #1e2a30;
+  outline: none;
+}
+
+/* Footer / Checkbox */
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 911px;
+  gap: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.checkbox-label a {
+  color: #6bb1e9;
+  text-decoration: none;
+}
+
+/* Button */
+.submit-btn {
+  align-self: flex-end;
+  background-color: transparent;
+  border: 1px solid #6bb1e9;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #6bb1e9;
+  color: #131d23;
+}
+
+/* Fehlermeldung */
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  display: block;
+}
+
+h2 {
+  font-size: 60px;
+  font-family: "Anta Regular";
+  text-shadow: none;
+  color: #6bb1e9;
+  margin-bottom: 1.5rem;
+}
+
+/* Custom Checkbox Layout */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none; /* Versteckt die native Checkbox */
+}
+
+.custom-checkbox label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Standard Checkbox-Bild */
+.checkbox-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url('../../../../assets/icon/Contact/Checkbox-empty.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Zustand: angehakt */
+input[type="checkbox"]:checked + label .checkbox-image {
+  background-image: url('../../../../assets/icon/Contact/Checkbox-checked.svg');
+}
+
+/* Zustand: Hover (nur wenn nicht gecheckt) */
+input[type="checkbox"]:not(:checked) + label:hover .checkbox-image {
+  background-image: url('../../../../assets/icon/Contact/Checkbox-hover.svg');
+}
+
+/* Zustand: Fehler */
+.custom-checkbox label.error .checkbox-image {
+  background-image: url('../../../../assets/icon/Contact/Checkbox-error.svg') !important;
 }

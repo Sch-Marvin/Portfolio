@@ -1,17 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm,} from '@angular/forms';
 
+
 @Component({
   selector: 'app-contact-me',
   standalone: true,
-  imports: [FormsModule,],
+  imports: [FormsModule,CommonModule],
   templateUrl: './contact-me.component.html',
   styleUrl: './contact-me.component.scss'
 })
 export class ContactMeComponent {
 
   http = inject(HttpClient);
+  privacyAccepted: boolean = false;
 
 contactData = {
   name: "",
@@ -49,4 +52,5 @@ onSubmit(ngForm: NgForm) {
     ngForm.resetForm();
   }
 }
+
 }

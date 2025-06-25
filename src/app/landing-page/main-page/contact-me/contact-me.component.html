@@ -1,22 +1,85 @@
-<section id="contact">
-   
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <div class="input-label">
-            
-                <label for="name">Your Name</label>
-                <input [(ngModel)]="contactData.name" type="text" id="name" name="name" required>
-            </div>
-            
-            <label for="email">Your Email</label>
-            <input [(ngModel)]="contactData.email" type="email" id="email" name="email" required  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" >
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
+  <div class="form-row">
+    <!-- NAME -->
+    <div class="input-label">
+      <label for="name">Your name</label>
+      <input
+        [(ngModel)]="contactData.name"
+        type="text"
+        id="name"
+        name="name"
+        required
+        #name="ngModel"
+      />
+      <span class="error-msg" *ngIf="name.invalid && name.touched">Please enter your name</span>
+    </div>
 
-        <label for="message">Subject</label>
-        <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message" placeholder="Write something.." required></textarea>
-        @if (!message.value && message.touched && !message.disabled) {
-            <span> Please enter a message </span>
-        }
-        <button type="submit" value="Submit"> Submit </button>
+    <!-- EMAIL -->
+    <div class="input-label">
+      <label for="email">Your Email</label>
+      <input
+        [(ngModel)]="contactData.email"
+        type="email"
+        id="email"
+        name="email"
+        required
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        #email="ngModel"
+      />
+      <span class="error-msg" *ngIf="email.errors?.['required'] && email.touched">
+        Please enter your email
+      </span>
+      <span class="error-msg" *ngIf="email.errors?.['pattern'] && email.touched">
+        Please enter a valid email address
+      </span>
+    </div>
+  </div>
 
-    </form>
+  <!-- MESSAGE -->
+  <div class="input-label textarea-label">
+    <label for="message">Your Message</label>
+    <textarea
+      [(ngModel)]="contactData.message"
+      name="message"
+      id="message"
+      required
+      minlength="20"
+      placeholder="Write something.."
+      #message="ngModel"
+    ></textarea>
+    <span class="error-msg" *ngIf="message.errors?.['required'] && message.touched">
+      Please enter a message
+    </span>
+    <span class="error-msg" *ngIf="message.errors?.['minlength'] && message.touched">
+      Message must be at least 20 characters long
+    </span>
+  </div>
 
-</section>
+
+<!-- PRIVACY CHECKBOX (mit Bild) -->
+<div class="custom-checkbox">
+  <input
+    type="checkbox"
+    id="privacy"
+    name="privacy"
+    [(ngModel)]="privacyAccepted"
+    required
+    #privacy="ngModel" 
+  />
+  <label for="privacy" [class.error]="privacy.invalid && privacy.touched">
+    <span class="checkbox-image"></span>
+    I agree to the <a href="/privacy-policy" target="_blank">privacy policy</a>
+  </label>
+</div>
+
+<span class="error-msg" *ngIf="privacy.invalid && privacy.touched">
+  You must accept the privacy policy
+</span>
+
+
+
+  <!-- BUTTON -->
+  <button type="submit" [disabled]="contactForm.invalid || !privacyAccepted">
+    Send
+  </button>
+</form>
