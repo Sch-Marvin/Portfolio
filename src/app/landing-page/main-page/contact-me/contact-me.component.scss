@@ -28,11 +28,17 @@ form {
   width: 911px;
 }
 
+
+//  
+//  Um den completten contact Formular zu verschieben/bearbeiten, vielleicht noch ein Div drum herrum um es besser zu justieren..!?
+//
+//
 .contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+
+
 }
 
 .form-row {
