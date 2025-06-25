@@ -1,4 +1,7 @@
-/* Allgemein */
+/* =======================================
+   🧱 Allgemeine Layout- & Grundelemente
+======================================= */
+
 body {
   background-color: #131d23;
   font-family: "Quantico-Regular", sans-serif;
@@ -23,22 +26,21 @@ nav {
   gap: 36px;
 }
 
-/* Formular Layout */
+/* =======================================
+   📄 Formular-Layout & Container
+======================================= */
+
 form {
   width: 1440px;
 }
 
-
-//  
-//  Um den completten contact Formular zu verschieben/bearbeiten, vielleicht noch ein Div drum herrum um es besser zu justieren..!?
-//
-//
 .contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-
+  // Optional: Für flexiblere Justierung kann
+  // hier ein zusätzlicher Wrapper verwendet werden
 }
 
 .form-row {
@@ -47,6 +49,10 @@ form {
   width: 100%;
   gap: 30px;
 }
+
+/* =======================================
+   🏷️ Label & Eingabefelder
+======================================= */
 
 label {
   padding-left: 40px;
@@ -65,7 +71,6 @@ label {
   max-width: 1004px;
   display: flex;
   justify-content: center;
-  
 }
 
 input,
@@ -76,30 +81,29 @@ textarea {
   transition: background-color 0.3s ease;
   font-size: 16px;
   padding: 12px 20px;
+
+  &:focus {
+    background-color: #1e2a30;
+    outline: none;
+  }
 }
 
-/* Input Styles */
 input {
   width: 445px;
   height: 60px;
   border-radius: 100px;
 }
 
-/* Textarea Style */
 textarea {
   height: 146px;
   border-radius: 25px;
   resize: none;
 }
 
-/* Fokus-Effekt */
-input:focus,
-textarea:focus {
-  background-color: #1e2a30;
-  outline: none;
-}
+/* =======================================
+   ✅ Footer: Checkbox & Datenschutzhinweis
+======================================= */
 
-/* Footer / Checkbox */
 .form-footer {
   display: flex;
   flex-direction: column;
@@ -113,14 +117,17 @@ textarea:focus {
   align-items: center;
   gap: 10px;
   font-size: 14px;
+
+  a {
+    color: #6bb1e9;
+    text-decoration: none;
+  }
 }
 
-.checkbox-label a {
-  color: #6bb1e9;
-  text-decoration: none;
-}
+/* =======================================
+   🔘 Button (Absenden)
+======================================= */
 
-/* Button */
 .submit-btn {
   align-self: flex-end;
   background-color: transparent;
@@ -131,14 +138,17 @@ textarea:focus {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #6bb1e9;
+    color: #131d23;
+  }
 }
 
-.submit-btn:hover {
-  background-color: #6bb1e9;
-  color: #131d23;
-}
+/* =======================================
+   ⚠️ Fehlermeldung
+======================================= */
 
-/* Fehlermeldung */
 .error-msg {
   color: red;
   font-size: 0.9rem;
@@ -146,54 +156,70 @@ textarea:focus {
   display: block;
 }
 
+/* =======================================
+   🖋️ Überschrift
+======================================= */
+
 h2 {
   font-size: 60px;
   font-family: "Anta Regular";
   text-shadow: none;
   color: #6bb1e9;
   margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Custom Checkbox Layout */
+/* =======================================
+   ✅ Custom Checkbox Styling
+======================================= */
+
 .custom-checkbox {
   display: flex;
   align-items: center;
   margin-top: 1rem;
-}
 
-.custom-checkbox input[type="checkbox"] {
-  display: none; /* Versteckt die native Checkbox */
-}
+  input[type="checkbox"] {
+    display: none; // Native Checkbox verstecken
+  }
 
-.custom-checkbox label {
+  label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &.error .checkbox-image {
+      background-image: url('../../../../assets/icon/Contact/Checkbox-error.svg') !important;
+    }
+  }
+
+  .checkbox-image {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    flex-shrink: 0;
+    background-image: url('../../../../assets/icon/Contact/Checkbox-empty.svg');
+  }
+
+  input[type="checkbox"]:checked + label .checkbox-image {
+    background-image: url('../../../../assets/icon/Contact/Checkbox-checked.svg');
+  }
+
+  input[type="checkbox"]:not(:checked) + label:hover .checkbox-image {
+    background-image: url('../../../../assets/icon/Contact/Checkbox-hover.svg');
+  }
+
+.arrowUp{
   display: flex;
+  justify-content: center;
   align-items: center;
-  cursor: pointer;
+  padding-left: 150px;
+  margin-left: 150px;
 }
 
-/* Standard Checkbox-Bild */
-.checkbox-image {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  background-image: url('../../../../assets/icon/Contact/Checkbox-empty.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: inline-block;
-  flex-shrink: 0;
-}
 
-/* Zustand: angehakt */
-input[type="checkbox"]:checked + label .checkbox-image {
-  background-image: url('../../../../assets/icon/Contact/Checkbox-checked.svg');
-}
-
-/* Zustand: Hover (nur wenn nicht gecheckt) */
-input[type="checkbox"]:not(:checked) + label:hover .checkbox-image {
-  background-image: url('../../../../assets/icon/Contact/Checkbox-hover.svg');
-}
-
-/* Zustand: Fehler */
-.custom-checkbox label.error .checkbox-image {
-  background-image: url('../../../../assets/icon/Contact/Checkbox-error.svg') !important;
 }

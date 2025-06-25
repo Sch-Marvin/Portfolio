@@ -2,9 +2,11 @@
 
 <h2>Contact Me</h2>
 
-<span *ngFor="let icon of contactIcons">
-  <img [src]="icon.current" (mouseenter)="onContactHover(icon.id)"(mouseleave)="onContactLeave(icon.id)" [alt]="icon.id + ' icon'"/>
-</span>
+<div class="arrowUp">
+  <span  *ngFor="let scroll of scrollIcons">
+    <img (click)="scrollToSection('about-me')"  [src]="scroll.current" (mouseenter)="onScrollHover(scroll.id)" (mouseleave)="onScrollLeave(scroll.id)" [alt]="scroll.id + ' icon'"/>
+  </span>
+</div>
 
 <div>
 
@@ -15,7 +17,7 @@
 
   </span>
 
-  <div>
+  <div><
 
     <span>
       <img src="../../../../assets/icon/Contact/contact_email.svg" alt="Email Icon">
@@ -28,6 +30,8 @@
   </div>
 
 </div>
+
+
 
 
 
