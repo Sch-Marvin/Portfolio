@@ -25,7 +25,7 @@ nav {
 
 /* Formular Layout */
 form {
-  width: 911px;
+  width: 1440px;
 }
 
 
@@ -43,6 +43,8 @@ form {
 
 .form-row {
   display: flex;
+  justify-content: center;
+  width: 100%;
   gap: 30px;
 }
 
@@ -60,7 +62,10 @@ label {
 
 .textarea-label {
   width: 100%;
-  max-width: 911px;
+  max-width: 1004px;
+  display: flex;
+  justify-content: center;
+  
 }
 
 input,
@@ -82,7 +87,6 @@ input {
 
 /* Textarea Style */
 textarea {
-  width: 100%;
   height: 146px;
   border-radius: 25px;
   resize: none;

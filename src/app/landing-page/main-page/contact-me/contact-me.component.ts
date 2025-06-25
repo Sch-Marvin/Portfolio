@@ -53,4 +53,8 @@ onSubmit(ngForm: NgForm) {
   }
 }
 
+scrollIcons = [
+  { id: 'upArrow', default: '../../../../assets/icon/Arrow down.png', hover: '../../../../assets/icon/Property 1=Hover Arrow down.png', current: '../../../../assets/icon/Arrow down.png' },
+];
+
 }
