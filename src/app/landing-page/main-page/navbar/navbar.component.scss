@@ -67,6 +67,14 @@
   }
 }
 
+.language-switch span.active {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+
+
+
 .left-section {
   display: flex;
   flex-direction: column;
@@ -116,12 +124,13 @@ p.active-background {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  color: white;
+  color: #ffffff !important;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100px;
   height: 56px;
+
 }
 
 p.active {

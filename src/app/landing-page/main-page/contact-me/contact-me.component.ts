@@ -35,23 +35,28 @@ post = {
 };
 
 onSubmit(ngForm: NgForm) {
+  // Checkbox manuell auf "touched" setzen
+  if (ngForm.controls['privacy']) {
+    ngForm.controls['privacy'].markAsTouched();
+  }
+
   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-    this.http.post(this.post.endPoint, this.post.body(this.contactData))
-      .subscribe({
-        next: (response) => {
-
-          ngForm.resetForm();
-        },
-        error: (error) => {
-          console.error(error);
-        },
-        complete: () => console.info('send post complete'),
-      });
+    this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
+      next: (response) => {
+        ngForm.resetForm();
+        this.privacyAccepted = false; // hier hinzufügen
+      },
+      error: (error) => {
+        console.error(error);
+      },
+      complete: () => console.info('send post complete'),
+    });
   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
     ngForm.resetForm();
+    this.privacyAccepted = false; // auch hier hinzufügen
   }
 }
+
 
 scrollIcons = [
   { 
@@ -99,5 +104,14 @@ smoothBounce(offset: number, duration: number) {
   };
   requestAnimationFrame(animate);
 }
+
+
+onPrivacyChange(control: any) {
+  if (!this.privacyAccepted) {
+    control.control.markAsTouched(); // Wenn abgewählt, erzwinge Fehlermeldung
+  }
+}
+
+
 
 }

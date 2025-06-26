@@ -7,7 +7,7 @@ body {
   color: white;
   width: 1440px;
 }
-.arrowUp{
+.arrowUp {
   padding-left: 1250px;
 }
 
@@ -24,7 +24,7 @@ body {
   justify-content: center;
   padding-bottom: 48px;
 }
-.text{
+.text {
   width: 429px;
   height: 124px;
   font-family: "JS Regular";
@@ -47,7 +47,8 @@ p {
   align-items: center;
   color: #F8F5EC;
   padding-bottom: 16px;
-  img{
+
+  img {
     width: 30px;
     height: 30px;
     display: flex;
@@ -56,18 +57,18 @@ p {
     padding-right: 20px;
   }
 
-  contect-email{
-    height: 124px;
+  contect-email {
     height: 445px;
   }
 
-.contect-information{
-  display: flex;
-  justify-content:space-between;
-  height: 124px;
-  padding-bottom: 16px;
+  contect-information {
+    display: flex;
+    justify-content: space-between;
+    height: 124px;
+    padding-bottom: 16px;
+  }
 }
-}
+
 /* =======================================
    📄 Formular-Layout & Container
 ======================================= */
@@ -75,16 +76,11 @@ p {
 form {
   width: 1440px;
 }
-
 .contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  // Optional: Für flexiblere Justierung kann
-  // hier ein zusätzlicher Wrapper verwendet werden
 }
-
 .form-row {
   display: flex;
   justify-content: center;
@@ -103,12 +99,19 @@ label {
   font-size: 14px;
 }
 
+label.checkbox-line{
+  padding-top: 0 ;
+  padding-right: 150px ;
+  font-size: 50px;
+}
+
+
+
 .input-label {
   display: flex;
   flex-direction: column;
   padding-top: 16px;
 }
-
 .textarea-label {
   width: 100%;
   max-width: 1004px;
@@ -136,7 +139,6 @@ input {
   height: 60px;
   border-radius: 100px;
 }
-
 textarea {
   height: 146px;
   border-radius: 25px;
@@ -167,8 +169,6 @@ textarea {
   }
 }
 
-
-
 /* =======================================
    ⚠️ Fehlermeldung
 ======================================= */
@@ -176,8 +176,12 @@ textarea {
 .error-msg {
   color: red;
   font-size: 0.9rem;
-  margin-top: 4px;
+  margin-top: 6px;
   display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 64px;
 }
 
 /* =======================================
@@ -197,13 +201,15 @@ h2 {
 }
 
 /* =======================================
-   ✅ Custom Checkbox Styling
+   ✅ Custom Checkbox Styling (neu)
 ======================================= */
 
 .custom-checkbox {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
   margin-top: 1rem;
+  gap: 10px;
 
   input[type="checkbox"] {
     display: none; // Native Checkbox verstecken
@@ -213,39 +219,30 @@ h2 {
     display: flex;
     align-items: center;
     cursor: pointer;
-
-    &.error .checkbox-image {
-      background-image: url('../../../../assets/icon/Contact/Checkbox-error.svg') !important;
-    }
   }
 
   .checkbox-image {
     width: 24px;
     height: 24px;
-    margin-right: 10px;
     background-size: cover;
     background-repeat: no-repeat;
     display: inline-block;
     flex-shrink: 0;
     background-image: url('../../../../assets/icon/Contact/Checkbox-empty.svg');
-  }
 
-  input[type="checkbox"]:checked + label .checkbox-image {
-    background-image: url('../../../../assets/icon/Contact/Checkbox-checked.svg');
-    width: 24px;
-    height: 24px;
-  }
+    &.checked {
+      background-image: url('../../../../assets/icon/Contact/Checkbox-checked.svg');
+    }
 
-  input[type="checkbox"]:not(:checked) + label:hover .checkbox-image {
-    background-image: url('../../../../assets/icon/Contact/Checkbox-hover.svg');
-
+    &.error {
+      background-image: url('../../../../assets/icon/Contact/Checkbox-error.svg') !important;
+    }
   }
 }
 
 /* =======================================
    🔘 Button (Absenden)
 ======================================= */
-
 
 .contact-submit-button {
   align-self: flex-end;
@@ -271,29 +268,33 @@ h2 {
   }
 }
 
-.arrowUp{
+.arrowUp {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.privacy-text{
-
+.privacy-text {
   color: #F8F5EC;
-  font-size: 14;
+  font-size: 14px;
+  &:hover{
+    cursor:default;
+  }
 
 }
 
-.botten-section{
+
+.botten-section {
   width: 930px;
   height: 80px;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 180px;
+  padding-bottom: 130px;
 }
 
-a{
+a {
   font-family: 'JS Regular';
   color: #89BCD9;
   font-size: 14px;
 }
+

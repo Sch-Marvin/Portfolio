@@ -23,20 +23,31 @@
 
     <nav class="navbar-text">
 
-      <p (click)="toggleBackground('item1'); scrollToSection('about-me')" [class.active-background]="selectedItem === 'item1'">Why me</p>
-      <p (click)="toggleBackground('item2'); scrollToSection('abilities')" [class.active-background]="selectedItem === 'item2'">Skills</p>
-      <p (click)="toggleBackground('item3'); scrollToSection('project')" [class.active-background]="selectedItem === 'item3'">Projects</p>
-      <p (click)="toggleBackground('item4'); scrollToSection('contact')" [class.active-background]="selectedItem === 'item4'">Contact</p>
+      <p (click)="toggleBackground('item1'); scrollToSection('about-me')" [class.active-background]="selectedItem === 'item1'">{{ 'NAV.WHY' | translate }}</p>
+      <p (click)="toggleBackground('item2'); scrollToSection('abilities')" [class.active-background]="selectedItem === 'item2'">{{ 'NAV.SKILLS' | translate }}</p>
+      <p (click)="toggleBackground('item3'); scrollToSection('project')" [class.active-background]="selectedItem === 'item3'">{{ 'NAV.PROJECTS' | translate }}</p>
+      <p (click)="toggleBackground('item4'); scrollToSection('contact')" [class.active-background]="selectedItem === 'item4'">{{ 'NAV.CONTACT' | translate }}</p>
+      
       
     </nav> 
     
     
    
   </div>
+  
   <div class="language-switch">
+    <span (click)="switchLanguage('de')" [class.active]="translate.currentLang === 'de'">{{ 'NAV.LANG.DE' | translate }}</span>
+    <div class="switch" (click)="switchLanguage('en')">
+      <span [class.active]="translate.currentLang === 'en'">{{ 'NAV.LANG.EN' | translate }}</span>
+    </div>
+    
+  </div>
+</div>
+
+  <!-- <div class="language-switch">
     <span>DE</span>
     <div class="switch">
       <span>EN</span>
     </div>
   </div>
-</div>
+</div> -->
