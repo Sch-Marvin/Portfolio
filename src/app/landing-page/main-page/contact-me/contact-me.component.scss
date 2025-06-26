@@ -1,11 +1,14 @@
 /* =======================================
    🧱 Allgemeine Layout- & Grundelemente
 ======================================= */
-
 body {
   background-color: #131d23;
   font-family: "Quantico-Regular", sans-serif;
   color: white;
+  width: 1440px;
+}
+.arrowUp{
+  padding-left: 1250px;
 }
 
 #contact {
@@ -13,11 +16,22 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 .contact-text {
-  max-width: 429px;
+  max-width: 1440px;
   height: 124px;
-  text-align: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+.text{
+  width: 429px;
+  height: 124px;
+  font-family: "JS Regular";
+  font-size: 20px;
+  color: #F8F5EC;
+  text-align: left;
+  padding-right: 36px;
 }
 
 nav {
@@ -25,7 +39,35 @@ nav {
   justify-content: center;
   gap: 36px;
 }
+p {
+  font-family: 'JS Regular';
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #F8F5EC;
+  padding-bottom: 16px;
+  img{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-right: 20px;
+  }
 
+  contect-email{
+    height: 124px;
+    height: 445px;
+  }
+
+.contect-information{
+  display: flex;
+  justify-content:space-between;
+  height: 124px;
+  padding-bottom: 16px;
+}
+}
 /* =======================================
    📄 Formular-Layout & Container
 ======================================= */
@@ -64,6 +106,7 @@ label {
 .input-label {
   display: flex;
   flex-direction: column;
+  padding-top: 16px;
 }
 
 .textarea-label {
@@ -124,26 +167,7 @@ textarea {
   }
 }
 
-/* =======================================
-   🔘 Button (Absenden)
-======================================= */
 
-.submit-btn {
-  align-self: flex-end;
-  background-color: transparent;
-  border: 1px solid #6bb1e9;
-  color: white;
-  border-radius: 30px;
-  padding: 10px 25px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: #6bb1e9;
-    color: #131d23;
-  }
-}
 
 /* =======================================
    ⚠️ Fehlermeldung
@@ -165,6 +189,7 @@ h2 {
   font-family: "Anta Regular";
   text-shadow: none;
   color: #6bb1e9;
+  padding-top: 104px;
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
@@ -177,7 +202,7 @@ h2 {
 
 .custom-checkbox {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 1rem;
 
   input[type="checkbox"] {
@@ -195,8 +220,8 @@ h2 {
   }
 
   .checkbox-image {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     margin-right: 10px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -207,19 +232,68 @@ h2 {
 
   input[type="checkbox"]:checked + label .checkbox-image {
     background-image: url('../../../../assets/icon/Contact/Checkbox-checked.svg');
+    width: 24px;
+    height: 24px;
   }
 
   input[type="checkbox"]:not(:checked) + label:hover .checkbox-image {
     background-image: url('../../../../assets/icon/Contact/Checkbox-hover.svg');
+
   }
+}
+
+/* =======================================
+   🔘 Button (Absenden)
+======================================= */
+
+
+.contact-submit-button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: 1px solid #6bb1e9;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 101px;
+  height: 48px;
+
+  &:hover {
+    background-color: #6bb1e9;
+    color: #131d23;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
 
 .arrowUp{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 150px;
-  margin-left: 150px;
 }
 
+.privacy-text{
 
+  color: #F8F5EC;
+  font-size: 14;
+
+}
+
+.botten-section{
+  width: 930px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 180px;
+}
+
+a{
+  font-family: 'JS Regular';
+  color: #89BCD9;
+  font-size: 14px;
 }

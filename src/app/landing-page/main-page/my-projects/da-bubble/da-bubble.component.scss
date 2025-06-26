@@ -61,6 +61,12 @@ h3 {
     height: 312px;
   }
 }
+.project-image{
+  transition: transform 0.3s ease-in-out;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
 
 .icons {
   display: flex;
@@ -102,9 +108,8 @@ button {
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  background: #89bcd95f;
+&:hover{
+  background: #ffffff;
   color: #1e242b;
+}
 }

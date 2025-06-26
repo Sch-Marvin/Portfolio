@@ -5,13 +5,14 @@
   align-items: center;
   width: 1222px;
   height: 104px;
-  background-color: #89bcd9;
+  background-color: #89bcd9 !important;
   padding: 0 109px;
   &.fixed {
     position: fixed;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1000;
   }
 
   &.original {

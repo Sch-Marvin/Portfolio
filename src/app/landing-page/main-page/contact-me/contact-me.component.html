@@ -8,26 +8,28 @@
   </span>
 </div>
 
-<div>
+<div class="contact-text">
 
-  <span>
+  <span class="text">
 
-    Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work. 
+    Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work. <br>
     Example: Feel free to get in touch with job offers or opportunities such as: ...
-
+    
   </span>
+    
+  <div class="contect-information">
 
-  <div><
-
-    <span>
-      <img src="../../../../assets/icon/Contact/contact_email.svg" alt="Email Icon">
+    <span class="contect-email">
+      <p> <img src="../../../../assets/icon/Contact/contact_email.svg" alt="Email Icon"> E-mail: marvinschneemann&#64;gmx.de </p>
     </span>
-
-    <span>
-      <img src="../../../../assets/icon/Contact/contact_phone_.svg" alt="Phone Icon">
+    
+    <span class="contect-email">
+      <p> <img src="../../../../assets/icon/Contact/contact_phone_.svg" alt="Phone Icon"> Tel: 0151-62947199</p>
     </span>
-
+  
   </div>
+    
+  
 
 </div>
 
@@ -39,7 +41,7 @@
   <div class="form-row">
     <!-- NAME -->
     <div class="input-label">
-      <label for="name">Your name</label>
+      <label for="name">Your Name</label>
       <input
         [(ngModel)]="contactData.name"
         type="text"
@@ -94,29 +96,38 @@
 
 
 <!-- PRIVACY CHECKBOX (mit Bild) -->
-<div class="custom-checkbox">
-  <input
+<div class="botten-section">
+
+  <div class="custom-checkbox">
+    
+    <input
     type="checkbox"
     id="privacy"
     name="privacy"
     [(ngModel)]="privacyAccepted"
     required
-    #privacy="ngModel" 
-  />
-  <label for="privacy" [class.error]="privacy.invalid && privacy.touched">
-    <span class="checkbox-image"></span>
-    I agree to the <a href="/privacy-policy" target="_blank">privacy policy</a>
-  </label>
-</div>
-
-<span class="error-msg" *ngIf="privacy.invalid && privacy.touched">
-  You must accept the privacy policy
-</span>
-
-
-
+    #privacy="ngModel"
+    />
+    
+    <label for="privacy" [class.error]="privacy.invalid && privacy.touched">
+      <span class="checkbox-image"></span>
+    </label>
+    
+    <span class="privacy-text">
+      I agree to the
+      &nbsp;<a href="/privacy-policy" target="_blank">privacy policy</a>&nbsp;
+      and agree to the processing of my data as outlined.
+    </span>
+    
+    <span class="error-msg" *ngIf="privacy.invalid && privacy.touched">
+      You must accept the privacy policy
+    </span>
+  </div>
+  
+  
   <!-- BUTTON -->
-  <button type="submit" [disabled]="contactForm.invalid || !privacyAccepted">
+  <button class="contact-submit-button" type="submit" [disabled]="contactForm.invalid || !privacyAccepted">
     Send
   </button>
+</div>
 </form>
