@@ -68,7 +68,8 @@
 }
 
 body {
-  background-color: #262e34;
+
+  // background-color: #262e34;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,14 +78,15 @@ body {
 }
 h1 {
   font-family: "Anta Regular";
-  font-size: 5.5rem;
+  font-size: clamp(36px, 7vw, 88px);
   color: #f8f5ec;
   text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black,
     -1px 1px 0 black;
 }
+
 h2 {
   font-family: "JS Regular";
-  font-size: 2.5rem;
+  font-size: clamp(24px, 4vw, 40px);
   color: #f8f5ec;
   text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black,
     -1px 1px 0 black;
@@ -92,13 +94,13 @@ h2 {
 
 h3 {
   font-family: "Anta Regular";
-  font-size: 1rem;
+  font-size: clamp(14px, 2vw, 16px);
   color: #f8f5ec;
 }
 
 h4 {
-  font-size: 1rem;
   font-family: "JS Light";
+  font-size: clamp(14px, 2vw, 16px);
   color: #262e34;
 }
 
