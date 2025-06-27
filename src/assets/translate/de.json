@@ -1,13 +1,66 @@
 {
-    "NAV": {
-      "WHY": "Warum ich",
-      "SKILLS": "Fähigkeiten",
-      "PROJECTS": "Projekte",
-      "CONTACT": "Kontakt",
-      "LANG": {
-        "DE": "DE",
-        "EN": "EN"
-      }
+  "NAV": {
+    "WHY": "Warum ich",
+    "SKILLS": "Fähigkeiten",
+    "PROJECTS": "Projekte",
+    "CONTACT": "Kontakt",
+    "LANG": {
+      "DE": "DE",
+      "EN": "EN"
+    }
+  },
+  "ABF":{
+    "TITEL_ABF":"FRONTEND ENTWICKLER",
+    "DEVELOPER":"entwickler",
+    "LEGAL_NOTICE": "Impressum"
+  },
+   "ABOUT_ME": {
+    "TITLE": "Warum ich",
+    "I_AM": "Ich bin",
+    "LOCATION_TEXT": "in Stockach ansässig",
+    "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vel molestias est atque aut? Ad illo expedita non quidem dolorum facere ipsam eius corporis, reprehenderit maiores libero, laboriosam enim ab.",
+    "BUTTON": "Lass uns reden"
+  },
+  "SKILLS": {
+    "TITLE": "Meine Fähigkeiten",
+    "LEARNING_INTRO": "Ich lerne derzeit",
+    "LEARNING_TEXT": "Zeige, dass du motiviert bist, deine Fähigkeiten stetig zu verbessern, innovative Lösungen umzusetzen und mit neuen Technologien Schritt zu halten."
+  },
+
+  "CONTACT": {
+  "TITLE": "Kontakt",
+  "INTRO": "Motiviere Besucher, dich zu kontaktieren, und beschreibe, welche Art von Rolle dich interessiert. Zeige, dass du durch deine Arbeit einen Mehrwert für ihre Projekte bieten kannst.",
+  "EXAMPLE": "Beispiel: Melde dich gerne mit Jobangeboten oder Möglichkeiten wie: ...",
+  "EMAIL_LABEL": "E-Mail",
+  "PHONE_LABEL": "Tel",
+  "FORM": {
+    "NAME_LABEL": "Dein Name",
+    "EMAIL_LABEL": "Deine E-Mail",
+    "MESSAGE_LABEL": "Deine Nachricht",
+    "MESSAGE_PLACEHOLDER": "Schreibe etwas..",
+    "PRIVACY_TEXT": "Ich stimme der",
+    "PRIVACY_LINK": "Datenschutzerklärung",
+    "PRIVACY_CONTINUE": "zu und erkläre mich mit der Verarbeitung meiner Daten einverstanden.",
+    "SUBMIT": "Senden",
+    "ERRORS": {
+      "NAME": "Bitte gib deinen Namen ein",
+      "EMAIL_REQUIRED": "Bitte gib deine E-Mail-Adresse ein",
+      "EMAIL_INVALID": "Bitte gib eine gültige E-Mail-Adresse ein",
+      "MESSAGE_REQUIRED": "Bitte gib eine Nachricht ein",
+      "MESSAGE_MINLENGTH": "Die Nachricht muss mindestens 20 Zeichen lang sein",
+      "PRIVACY": "Du musst der Datenschutzerklärung zustimmen"
     }
   }
-  
+},
+"PROJECTS": {
+  "TITLE": "Meine Projekte",
+  "TABS": {
+    "PROJECT_1": "1. Join",
+    "PROJECT_2": "2. Sharkie",
+    "PROJECT_3": "3. Join",
+    "PROJECT_4": "4. Laufendes Projekt"
+  }
+}
+
+
+}

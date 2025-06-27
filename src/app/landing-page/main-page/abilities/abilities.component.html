@@ -1,37 +1,35 @@
 <section id="abilities">
   <div class="content">
-    <h2>My Skills</h2>
+    <h2>{{ "SKILLS.TITLE" | translate }}</h2>
 
     <div class="my-skills">
       <div class="skill-container">
-        @for (skill of skills; track skill){
-
-        <div class="skill">
-          <img class="icon-img" [src]="skill.src" [alt]="skill.alt" />
-          <p>{{ skill.alt }}</p>
-        </div>
+        @for (skill of skills; track skill) {
+          <div class="skill">
+            <img class="icon-img" [src]="skill.src" [alt]="skill.alt" />
+            <p>{{ skill.alt }}</p>
+          </div>
         }
       </div>
 
       <div class="learning">
         <span class="about-to-text">
-          <span class="currently"> I am currently learning </span>
+          <span class="currently">{{ "SKILLS.LEARNING_INTRO" | translate }}</span>
 
           <div class="learning-icon">
             @for (item of learning; track item) {
-            <div>
-              <img [src]="item.src" [alt]="item.alt" />
-              <p>{{ item.alt }}</p>
-            </div>
-          }
+              <div>
+                <img [src]="item.src" [alt]="item.alt" />
+                <p>{{ item.alt }}</p>
+              </div>
+            }
           </div>
+
           <span class="learning-text">
-            Show that you are motivated to continually improve your skills,
-            implement innovative solutions and stay abreast of new technologies.
+            {{ "SKILLS.LEARNING_TEXT" | translate }}
           </span>
         </span>
       </div>
     </div>
   </div>
-
 </section>

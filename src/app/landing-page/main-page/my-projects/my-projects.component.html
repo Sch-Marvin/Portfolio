@@ -1,12 +1,21 @@
 <section id="project">
-  <h2>My Projects</h2>
+  <h2>{{ "PROJECTS.TITLE" | translate }}</h2>
 
   <nav>
-    <a (click)="selectTab(0)" [class.active]="selectedTab() === 0" id="project-1">1. DA Bubble</a>
-    <a (click)="selectTab(1)" [class.active]="selectedTab() === 1" id="project-2">2. Sharkie</a>
-    <a (click)="selectTab(2)" [class.active]="selectedTab() === 2" id="project-3">3. Join</a>
-    <a (click)="selectTab(3)" [class.active]="selectedTab() === 3" id="project-4">4. Ongoing Project</a>
+    <a (click)="selectTab(0)" [class.active]="selectedTab() === 0" id="project-1">
+      {{ "PROJECTS.TABS.PROJECT_1" | translate }}
+    </a>
+    <a (click)="selectTab(1)" [class.active]="selectedTab() === 1" id="project-2">
+      {{ "PROJECTS.TABS.PROJECT_2" | translate }}
+    </a>
+    <a (click)="selectTab(2)" [class.active]="selectedTab() === 2" id="project-3">
+      {{ "PROJECTS.TABS.PROJECT_3" | translate }}
+    </a>
+    <a (click)="selectTab(3)" [class.active]="selectedTab() === 3" id="project-4">
+      {{ "PROJECTS.TABS.PROJECT_4" | translate }}
+    </a>
   </nav>
+
   <div [ngSwitch]="selectedTab()">
     <app-da-bubble *ngSwitchCase="0"></app-da-bubble>
     <app-game *ngSwitchCase="1"></app-game>

@@ -12,42 +12,59 @@
           src="../../../../assets/icon/Logo icon-Dark 2.png"
           alt="Logo-2"
         />
-      </div>
+      </div> 
       <div class="titel-container">
         <h3>M.Schneemann</h3>
-        <h4>developer</h4>
+        <h4>{{"ABF.DEVELOPER" | translate }}</h4>
       </div>
     </div>
   </div>
   <div class="navbar-link">
-
     <nav class="navbar-text">
-
-      <p (click)="toggleBackground('item1'); scrollToSection('about-me')" [class.active-background]="selectedItem === 'item1'">{{ 'NAV.WHY' | translate }}</p>
-      <p (click)="toggleBackground('item2'); scrollToSection('abilities')" [class.active-background]="selectedItem === 'item2'">{{ 'NAV.SKILLS' | translate }}</p>
-      <p (click)="toggleBackground('item3'); scrollToSection('project')" [class.active-background]="selectedItem === 'item3'">{{ 'NAV.PROJECTS' | translate }}</p>
-      <p (click)="toggleBackground('item4'); scrollToSection('contact')" [class.active-background]="selectedItem === 'item4'">{{ 'NAV.CONTACT' | translate }}</p>
-      
-      
-    </nav> 
-    
-    
-   
+      <p
+        (click)="toggleBackground('item1'); scrollToSection('about-me')"
+        [class.active-background]="selectedItem === 'item1'"
+      >
+        {{ "NAV.WHY" | translate }}
+      </p>
+      <p
+        (click)="toggleBackground('item2'); scrollToSection('abilities')"
+        [class.active-background]="selectedItem === 'item2'"
+      >
+        {{ "NAV.SKILLS" | translate }}
+      </p>
+      <p
+        (click)="toggleBackground('item3'); scrollToSection('project')"
+        [class.active-background]="selectedItem === 'item3'"
+      >
+        {{ "NAV.PROJECTS" | translate }}
+      </p>
+      <p
+        (click)="toggleBackground('item4'); scrollToSection('contact')"
+        [class.active-background]="selectedItem === 'item4'"
+      >
+        {{ "NAV.CONTACT" | translate }}
+      </p>
+    </nav>
   </div>
-  
+
+
+
+
+
   <div class="language-switch">
-    <span (click)="switchLanguage('de')" [class.active]="translate.currentLang === 'de'">{{ 'NAV.LANG.DE' | translate }}</span>
-    <div class="switch" (click)="switchLanguage('en')">
-      <span [class.active]="translate.currentLang === 'en'">{{ 'NAV.LANG.EN' | translate }}</span>
-    </div>
-    
-  </div>
-</div>
+    <span
+      (click)="switchLanguage('de')"
+      [class.active]="translate.currentLang === 'de'"
+      >{{ "NAV.LANG.DE" | translate }}</span>
 
-  <!-- <div class="language-switch">
-    <span>DE</span>
-    <div class="switch">
-      <span>EN</span>
+
+    <div class="switch" (click)="switchLanguage('en')">
+      <span [class.active]="translate.currentLang === 'en'">{{
+        "NAV.LANG.EN" | translate
+      }}</span>
     </div>
+
   </div>
-</div> -->
+
+</div>

@@ -1,13 +1,66 @@
 {
-    "NAV": {
-      "WHY": "Why me",
-      "SKILLS": "Skills",
-      "PROJECTS": "Projects",
-      "CONTACT": "Contact",
-      "LANG": {
-        "DE": "DE",
-        "EN": "EN"
-      }
+  "NAV": {
+    "WHY": "Why me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact",
+    "LANG": {
+      "DE": "DE",
+      "EN": "EN"
+    }
+  },
+  "ABF":{
+    "TITEL_ABF":"FRONTEND DEVELOPER",
+    "DEVELOPER":"developer",
+    "LEGAL_NOTICE": "Legal notice"
+  },
+  "ABOUT_ME": {
+    "TITLE": "Why me",
+    "I_AM": "I am",
+    "LOCATION_TEXT": "located in Stockach",
+    "DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt vel molestias est atque aut? Ad illo expedita non quidem dolorum facere ipsam eius corporis, reprehenderit maiores libero, laboriosam enim ab.",
+    "BUTTON": "Let's talk"
+  },
+  "SKILLS": {
+    "TITLE": "My Skills",
+    "LEARNING_INTRO": "I am currently learning",
+    "LEARNING_TEXT": "Show that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new technologies."
+  },
+
+  "CONTACT": {
+  "TITLE": "Contact Me",
+  "INTRO": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+  "EXAMPLE": "Example: Feel free to get in touch with job offers or opportunities such as: ...",
+  "EMAIL_LABEL": "E-Mail",
+  "PHONE_LABEL": "Tel",
+  "FORM": {
+    "NAME_LABEL": "Your Name",
+    "EMAIL_LABEL": "Your Email",
+    "MESSAGE_LABEL": "Your Message",
+    "MESSAGE_PLACEHOLDER": "Write something..",
+    "PRIVACY_TEXT": "I agree to the",
+    "PRIVACY_LINK": "privacy policy",
+    "PRIVACY_CONTINUE": "and agree to the processing of my data as outlined.",
+    "SUBMIT": "Send",
+    "ERRORS": {
+      "NAME": "Please enter your name",
+      "EMAIL_REQUIRED": "Please enter your email",
+      "EMAIL_INVALID": "Please enter a valid email address",
+      "MESSAGE_REQUIRED": "Please enter a message",
+      "MESSAGE_MINLENGTH": "Message must be at least 20 characters long",
+      "PRIVACY": "You must accept the privacy policy"
     }
   }
-  
+},
+"PROJECTS": {
+  "TITLE": "My Projects",
+  "TABS": {
+    "PROJECT_1": "1. Join",
+    "PROJECT_2": "2. Sharkie",
+    "PROJECT_3": "3. Join",
+    "PROJECT_4": "4. Ongoing Project"
+  }
+}
+
+
+}

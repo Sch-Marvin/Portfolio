@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DaBubbleComponent } from './da-bubble/da-bubble.component'; 
-import { GameComponent } from './game/game.component'; 
-import { JoinComponent } from './join/join.component'; 
-import { OngoingProjectComponent } from './ongoing-project/ongoing-project.component'; 
+import { DaBubbleComponent } from './da-bubble/da-bubble.component';
+import { GameComponent } from './game/game.component';
+import { JoinComponent } from './join/join.component';
+import { OngoingProjectComponent } from './ongoing-project/ongoing-project.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core'; // 👈 Import hinzufügen
 
 @Component({
   selector: 'app-my-projects',
@@ -13,10 +14,11 @@ import { OngoingProjectComponent } from './ongoing-project/ongoing-project.compo
     DaBubbleComponent,
     GameComponent,
     JoinComponent,
-    OngoingProjectComponent
+    OngoingProjectComponent,
+    TranslateModule,
   ],
   templateUrl: './my-projects.component.html',
-  styleUrls: ['./my-projects.component.scss']
+  styleUrls: ['./my-projects.component.scss'],
 })
 export class MyProjectsComponent {
   tab = 0;

@@ -12,8 +12,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core'; // 👈
 })
 export class NavbarComponent {
   constructor(public translate: TranslateService) {
-    this.translate.setDefaultLang('de');
-    this.translate.use('de'); // Startsprache setzen
+    this.translate.setDefaultLang('en');
+    this.translate.use('en'); // Startsprache setzen
   }
 
   switchLanguage(lang: string) {

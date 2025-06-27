@@ -56,11 +56,13 @@
 }
 
 .language-switch {
-  display: flex;
-  gap: 0.5rem;
+  display: flex; 
   align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+
   .switch {
-    background-color: #fff !important;
     border-radius: 999px;
     padding: 0.2rem 0.6rem;
     cursor: pointer;
@@ -69,10 +71,17 @@
 
 .language-switch span.active {
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
+  background-color: #fff;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+
+&:hover{
+  cursor: pointer;
+
 }
-
-
+}
 
 
 .left-section {
