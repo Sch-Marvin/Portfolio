@@ -166,6 +166,19 @@ header {
   color: #F8F5EC;
 }
 
+// header {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #262e34;
+//   height: clamp(400px, 80vh, 900px); /* wächst mit der Höhe des Viewports */
+//   width: clamp(320px, 100vw, 1440px); /* 100% Breite mit Max-Begrenzung */
+//   color: #F8F5EC;
+//   margin-right: 15px;
+//   margin-left: 15px;
+// }
+
+
 section {
   width: clamp(320px, 90vw, 1214px);
   display: flex;
@@ -178,10 +191,10 @@ section {
   height: clamp(300px, 60vw, 683px);
 
   .subject-img {
-    position: absolute;
+    position: relative;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    width: clamp(200px, 50vw, 535px);
+    height: clamp(300px, 60vw, 683px);
     z-index: 2;
   }
 
@@ -198,8 +211,8 @@ section {
     background-image: url("../../../../assets/img/shape.png");
     opacity: 1;
     top: 20px;
-    width: clamp(100px, 55vw, 580px);
-    height: clamp(100px, 60vw, 683px);
+    width: clamp(50px, 55vw, 580px);
+    height: clamp(50px, 60vw, 683px);
     transform: rotate(15deg);
     clip-path: none;
     border-radius: 100%;
@@ -209,8 +222,8 @@ section {
     background-image: url("../../../../assets/img/shape2.png");
     opacity: 0;
     top: 20px;
-    width: clamp(100px, 55vw, 580px);
-    height: clamp(100px, 60vw, 683px);
+    width: clamp(50px, 55vw, 580px);
+    height: clamp(50px, 60vw, 683px);
     transform: rotate(35deg);
     clip-path: none;
     border-radius: 100%;
@@ -236,7 +249,7 @@ section {
 }
 
 .logo-section {
-  width: clamp(300px, 80vw, 630px);
+  width: clamp(300px, 40vw, 630px);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -247,6 +260,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items:flex-start ;
   text-align: center;
   gap: clamp(3px, 1vw, 5px);
 }

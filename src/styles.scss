@@ -73,12 +73,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+
   margin: 0;
 }
+
 h1 {
   font-family: "Anta Regular";
-  font-size: clamp(36px, 7vw, 88px);
+  font-size: clamp(24px, 5vw, 88px);
   color: #f8f5ec;
   text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black,
     -1px 1px 0 black;
@@ -86,7 +87,7 @@ h1 {
 
 h2 {
   font-family: "JS Regular";
-  font-size: clamp(24px, 4vw, 40px);
+  font-size: clamp(14px, 2vw, 40px);
   color: #f8f5ec;
   text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black,
     -1px 1px 0 black;
