@@ -1,69 +1,157 @@
 <header>
   <section>
-
-    <div class="left-section-two">
-      <div class="logo-container">
-        <img class="logo-1" src="../../../../assets/icon/Logo icon1.png" alt="Logo-1"/>
-        <img class="logo-2" src="../../../../assets/icon/Logo icon2.png" alt="Logo-2"/>
+    <div class="top-section">
+      <div class="left-section-two">
+        <div class="logo-container">
+          <img class="logo-1" src="../../../../assets/icon/Logo icon1.png" alt="Logo-1" />
+          <img class="logo-2" src="../../../../assets/icon/Logo icon2.png" alt="Logo-2" />
+        </div>
+        <div class="titel-container">
+          <h3>M.Schneemann</h3>
+          <h4>{{ "ABF.DEVELOPER" | translate }}</h4>
+        </div>
       </div>
 
-      <div class="titel-container">
-        <h3>M.Schneemann</h3>
-        <h4>{{"ABF.DEVELOPER" | translate}}</h4>
+      <!-- Burger Menu Button -->
+      <div
+        #burgerBtn
+        class="burger-menu"
+        (click)="toggleMenu()"
+        *ngIf="isMobileView"
+        [class.open]="menuOpen"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
 
+    <!-- Mobile Navigation -->
+    <nav #mobileNav class="mobile-nav" *ngIf="menuOpen && isMobileView">
+      <ul>
+        <div class="navbar" [ngClass]="{ fixed: isFixed, original: isOriginal }">
+          <div class="logo-section">
+            <div class="left-section">
+              <div class="logo-container">
+                <img
+                  class="logo-1"
+                  src="../../../../assets/icon/Logo icon-Dark.png"
+                  alt="Logo-1"
+                />
+                <img
+                  class="logo-2"
+                  src="../../../../assets/icon/Logo icon-Dark 2.png"
+                  alt="Logo-2"
+                />
+              </div> 
+              <div class="titel-container">
+                <h3>M.Schneemann</h3>
+                <h4>{{"ABF.DEVELOPER" | translate }}</h4>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-link">
+            <nav class="navbar-text">
+              <p
+                (click)="toggleBackground('item1'); scrollToSection('about-me')"
+                [class.active-background]="selectedItem === 'item1'"
+              >
+                {{ "NAV.WHY" | translate }}
+              </p>
+              <p
+                (click)="toggleBackground('item2'); scrollToSection('abilities')"
+                [class.active-background]="selectedItem === 'item2'"
+              >
+                {{ "NAV.SKILLS" | translate }}
+              </p>
+              <p
+                (click)="toggleBackground('item3'); scrollToSection('project')"
+                [class.active-background]="selectedItem === 'item3'"
+              >
+                {{ "NAV.PROJECTS" | translate }}
+              </p>
+              <p
+                (click)="toggleBackground('item4'); scrollToSection('contact')"
+                [class.active-background]="selectedItem === 'item4'"
+              >
+                {{ "NAV.CONTACT" | translate }}
+              </p>
+            </nav>
+          </div>
+        
+        
+        
+        
+        
+          <div class="language-switch">
+            <span
+              (click)="switchLanguage('de')"
+              [class.active]="translate.currentLang === 'de'"
+              >{{ "NAV.LANG.DE" | translate }}</span>
+        
+        
+            <div class="switch" (click)="switchLanguage('en')">
+              <span [class.active]="translate.currentLang === 'en'">{{
+                "NAV.LANG.EN" | translate
+              }}</span>
+            </div>
+        
+          </div>
+        
+        </div>
+      </ul>
+    </nav>
+
+    <!-- Profil Bild und Shapes -->
     <div class="profil-Img">
-      <img class="subject-img" src="../../../../assets/img/subject-3.png" alt="My Image"/>
+      <img class="subject-img" src="../../../../assets/img/subject-3.png" alt="My Image" />
       <div class="shape-One"></div>
       <div class="shape-two"></div>
     </div>
 
+    <!-- Main Logo + Name + Scroll Button -->
     <div class="logo-Name-section">
-        <div class="logo-section">
-          
-          <div class="left-section">
-            <div class="logo-container">
-              <img class="logo-1" src="../../../../assets/icon/Logo icon1.png" alt="Logo-1"/>
-              <img class="logo-2" src="../../../../assets/icon/Logo icon2.png" alt="Logo-2"/>
-            </div>
-      
-            <div class="titel-container">
-              <h3>M.Schneemann</h3>
-              <h4>{{"ABF.DEVELOPER" | translate}}</h4>
-            </div>
+      <div class="logo-section">
+        <div class="left-section">
+          <div class="logo-container">
+            <img class="logo-1" src="../../../../assets/icon/Logo icon1.png" alt="Logo-1" />
+            <img class="logo-2" src="../../../../assets/icon/Logo icon2.png" alt="Logo-2" />
           </div>
-      
-          <div class="contact-icons">
-            <span *ngFor="let icon of contactIcons">
-              <img [src]="icon.current" (mouseenter)="onContactHover(icon.id)"(mouseleave)="onContactLeave(icon.id)" [alt]="icon.id + ' icon'"/>
-            </span>
+          <div class="titel-container">
+            <h3>M.Schneemann</h3>
+            <h4>{{ "ABF.DEVELOPER" | translate }}</h4>
           </div>
-          
-          
-      
         </div>
-      
-        <div class="name-Section">
-          <h1>M.Schneemann</h1>
-          <h2>{{"ABF.TITEL_ABF" | translate }}</h2>
+
+        <div class="contact-icons">
+          <span *ngFor="let icon of contactIcons">
+            <img
+              [src]="icon.current"
+              (mouseenter)="onContactHover(icon.id)"
+              (mouseleave)="onContactLeave(icon.id)"
+              [alt]="icon.id + ' icon'"
+            />
+          </span>
         </div>
-      
-        <div class="scroll-section">
-            <span *ngFor="let scroll of scrollIcons">
-              <img class="arrowDown" (click)="scrollToSection('about-me')"  [src]="scroll.current" (mouseenter)="onScrollHover(scroll.id)" (mouseleave)="onScrollLeave(scroll.id)" [alt]="scroll.id + ' icon'"/>
-            </span>
-          </div>
-          
-
-
-
       </div>
-      
-      
+
+      <div class="name-Section">
+        <h1>M.Schneemann</h1>
+        <h2>{{ "ABF.TITEL_ABF" | translate }}</h2>
+      </div>
+
+      <div class="scroll-section">
+        <span *ngFor="let scroll of scrollIcons">
+          <img
+            class="arrowDown"
+            (click)="scrollToSection('about-me')"
+            [src]="scroll.current"
+            (mouseenter)="onScrollHover(scroll.id)"
+            (mouseleave)="onScrollLeave(scroll.id)"
+            [alt]="scroll.id + ' icon'"
+          />
+        </span>
+      </div>
+    </div>
   </section>
 </header>
-
-
-
-

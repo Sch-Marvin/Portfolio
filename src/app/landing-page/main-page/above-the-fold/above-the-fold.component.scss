@@ -17,6 +17,12 @@ section {
   justify-content: space-between;
 }
 
+.top-section{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
 .profil-Img {
   position: relative;
   .subject-img {
@@ -93,13 +99,15 @@ section {
   text-align: center;
   gap: clamp(3px, 1vw, 5px);
 }
-.left-section-two{
+
+.left-section-two {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
   gap: clamp(3px, 1vw, 5px);
+
   display: none;
 }
 
@@ -130,6 +138,80 @@ section {
     }
     .logo-2 {
       opacity: 1;
+    }
+  }
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 100;
+
+  span {
+    height: 3px;
+    width: 100%;
+    background-color: #f8f5ec;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &.open {
+    span:nth-child(1) {
+      transform: rotate(45deg) translateY(8px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-8px);
+    }
+  }
+}
+
+.mobile-nav {
+  position: absolute;
+  
+left: 50%;
+  transform: rotate(0deg);
+  width: 335px;
+        height: 500px;
+        border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../../assets/img/shape.png");
+  background-position: center bottom;
+  background-size: cover;
+  
+  top: 100px;
+  left: 0;
+  width: 100%;
+  padding: 16px 0;
+  z-index: 99;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      text-align: center;
+      padding: 12px 0;
+
+      a {
+        color: #f8f5ec;
+        text-decoration: none;
+        font-size: 18px;
+
+        &:hover {
+          color: #60a5fa;
+        }
+      }
     }
   }
 }
@@ -169,135 +251,150 @@ section {
 }
 
 @media (max-width: 1130px) {
-  .shape-One {
-    height: 480px !important;
-    width: 563px !important;
-    transform: rotate(90deg) !important;
-    top: 75px !important;
-    left: -70px !important;
-    right: 5px !important;
+  .profil-Img .shape-One {
+    height: 480px;
+    width: 563px;
+    transform: rotate(90deg);
+    top: 75px;
+    left: -70px;
+    right: 5px;
   }
 
-  .shape-two {
-    height: 480px !important;
-    width: 563px !important;
-    transform: rotate(75deg) !important;
-    top: 75px !important;
-    left: -70px !important;
-    right: 5px !important;
+  .profil-Img .shape-two {
+    height: 480px;
+    width: 563px;
+    transform: rotate(75deg);
+    top: 75px;
+    left: -70px;
+    right: 5px;
   }
 
-  .subject-img {
-    width: 435px !important;
-    height: 583px !important;
+  .profil-Img .subject-img {
+    width: 435px;
+    height: 583px;
   }
 }
 
 @media (max-width: 1000px) {
-  .shape-One {
-    height: 380px !important;
-    width: 463px !important;
-    transform: rotate(120deg) !important;
-    top: 108px !important;
-    left: -61px !important;
+  .profil-Img .shape-One {
+    height: 380px;
+    width: 463px;
+    transform: rotate(120deg);
+    top: 108px;
+    left: -61px;
   }
 
-  .shape-two {
-    height: 380px !important;
-    width: 463px !important;
-    transform: rotate(284deg) !important;
-    top: 81px !important;
-    left: -61px !important;
+  .profil-Img .shape-two {
+    height: 380px;
+    width: 463px;
+    transform: rotate(284deg);
+    top: 81px;
+    left: -61px;
   }
 
-  .subject-img {
-    width: 335px !important;
-    height: 483px !important;
+  .profil-Img .subject-img {
+    width: 335px;
+    height: 483px;
   }
 }
 
 @media (max-width: 730px) {
   .logo-section {
-    display: flex;
     flex-direction: column;
     gap: clamp(0px, 15vw, 0px);
   }
 
   .logo-Name-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     gap: clamp(0px, 3vw, 0px);
   }
-  .contact-icons {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
 
-    gap: clamp(2px, 1vw, 5px);
+  .contact-icons {
+    flex-direction: row;
   }
-  .arrowDown{
-    width: 40px !important;
-    height: 70px !important;
+
+  .scroll-section .arrowDown {
+    width: 40px;
+    height: 70px;
   }
- 
 }
 
 @media (max-width: 650px) {
-  section{
+  section {
     flex-direction: column;
   }
-
   .profil-Img {
     display: flex;
     justify-content: center;
+    position: relative;
+    border-bottom-left-radius: 200px;
+    margin-bottom: 150px;
   }
 
-  .subject-img {
-    width: 335px !important;
-    height: 493px !important;
-    top: -1px;
+  .profil-Img .shape-One {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: rotate(0deg) translateX(-50%);
+    width: 335px;
+    height: 493px;
     border-bottom-left-radius: 167px;
     border-bottom-right-radius: 156px;
-}
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    opacity: 1;
+    background-image: url("../../../../assets/img/shape.png");
+    background-position: center bottom;
+    background-size: cover;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 100%;
   }
 
-  .shape-One {
-    height: 380px !important;
-    width: 463px !important;
-    transform: rotate(-81deg) !important;
-    top: 72px !important;
-    left: 71px !important;
-    opacity: 1 !important;
-    pointer-events: none;
-    transition: none !important;
+  .profil-Img .shape-two {
+    display: none;
   }
 
-  .shape-two {
-    display: none !important;
+  .profil-Img .subject-img {
+    position: relative;
+    z-index: 1;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
   }
 
   .profil-Img:hover .shape-One {
-    opacity: 1 !important;
+    opacity: 1;
   }
 
   .profil-Img:hover .shape-two {
-    opacity: 0 !important;
+    opacity: 0;
   }
 
-  .left-section-two{
+  .left-section-two {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
     gap: clamp(3px, 1vw, 5px);
- 
   }
+
   .left-section {
     display: none;
   }
+  
+  
+  
+  .burger-menu {
+    display: flex;
+  }
+  
+  .logo-section,
+  .contact-icons,
+  .scroll-section {
+    display: none;
+  }
+  
+}
+
 
