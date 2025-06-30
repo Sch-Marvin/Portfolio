@@ -17,7 +17,7 @@ section {
   justify-content: space-between;
 }
 
-.top-section{
+.top-section {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
@@ -107,7 +107,6 @@ section {
   align-items: flex-start;
   text-align: center;
   gap: clamp(3px, 1vw, 5px);
-
   display: none;
 }
 
@@ -176,28 +175,63 @@ section {
 
 .mobile-nav {
   position: absolute;
-  
-left: 50%;
+
+  left: 50%;
   transform: rotate(0deg);
   width: 335px;
-        height: 500px;
-        border-radius: 100%;
+  height: 500px;
+  border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url("../../../../assets/img/shape.png");
   background-position: center bottom;
   background-size: cover;
-  
-  top: 100px;
-  left: 0;
-  width: 100%;
+
+  top: 80px;
+  left: 47px;
+  width: 81%;
   padding: 16px 0;
   z-index: 99;
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    p {
+      font-family: 'JS Regular';
+      font-size: 22px;
+      color: #262E34;
+      padding-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      &:hover{
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+    .language-switch{
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      font-family: 'JS Regular';
+      font-size: 22px;
+      color: #262E34;
+      padding-bottom: 40px;
+    }
+
+    span{
+      &:hover{
+        cursor: pointer;
+        color: #262E34;
+        background-color: #fff;
+        border-radius: 50%;
+        height: 25px;
+        width: 45px;
+        text-align: center;
+      }
+    };
+
+
 
     li {
       text-align: center;
@@ -382,19 +416,13 @@ left: 50%;
   .left-section {
     display: none;
   }
-  
-  
-  
+
   .burger-menu {
     display: flex;
   }
-  
+
   .logo-section,
   .contact-icons,
   .scroll-section {
-    display: none;
   }
-  
 }
-
-
