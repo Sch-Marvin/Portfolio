@@ -1,5 +1,18 @@
 <header>
   <section>
+
+    <div class="left-section-two">
+      <div class="logo-container">
+        <img class="logo-1" src="../../../../assets/icon/Logo icon1.png" alt="Logo-1"/>
+        <img class="logo-2" src="../../../../assets/icon/Logo icon2.png" alt="Logo-2"/>
+      </div>
+
+      <div class="titel-container">
+        <h3>M.Schneemann</h3>
+        <h4>{{"ABF.DEVELOPER" | translate}}</h4>
+      </div>
+    </div>
+
     <div class="profil-Img">
       <img class="subject-img" src="../../../../assets/img/subject-3.png" alt="My Image"/>
       <div class="shape-One"></div>
@@ -38,7 +51,7 @@
       
         <div class="scroll-section">
             <span *ngFor="let scroll of scrollIcons">
-              <img (click)="scrollToSection('about-me')"  [src]="scroll.current" (mouseenter)="onScrollHover(scroll.id)" (mouseleave)="onScrollLeave(scroll.id)" [alt]="scroll.id + ' icon'"/>
+              <img class="arrowDown" (click)="scrollToSection('about-me')"  [src]="scroll.current" (mouseenter)="onScrollHover(scroll.id)" (mouseleave)="onScrollLeave(scroll.id)" [alt]="scroll.id + ' icon'"/>
             </span>
           </div>
           
