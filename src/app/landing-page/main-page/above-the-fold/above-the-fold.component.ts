@@ -172,4 +172,12 @@ export class AboveTheFoldComponent implements OnInit {
     };
     requestAnimationFrame(animate);
   }
+
+ 
+
+
+
+
+
+
 }

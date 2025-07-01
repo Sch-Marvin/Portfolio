@@ -206,7 +206,6 @@ section {
       justify-content: center;
       &:hover{
         cursor: pointer;
-        color: #fff;
       }
     }
     .language-switch{
@@ -223,7 +222,6 @@ section {
       &:hover{
         cursor: pointer;
         color: #262E34;
-        background-color: #fff;
         border-radius: 50%;
         height: 25px;
         width: 45px;
@@ -249,6 +247,27 @@ section {
     }
   }
 }
+
+p.active-background {
+
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+span.active{
+  background-image: url(../../../../assets/icon/button\ pressed\ small.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 37px;
+  color: #fff;
+}
+
+
+
 
 .titel-container {
   text-align: center;
