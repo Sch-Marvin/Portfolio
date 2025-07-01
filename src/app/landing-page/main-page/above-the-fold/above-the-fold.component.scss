@@ -25,53 +25,47 @@ section {
 
 .profil-Img {
   position: relative;
-  .subject-img {
-    position: relative;
-    display: flex;
-    width: 535px;
-    height: 683px;
-    z-index: 1;
-  }
-
-  .shape-One,
-  .shape-two {
-    background-position: center bottom;
-    position: absolute;
-    background-size: cover;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 0;
-  }
-
-  .shape-One {
-    background-image: url("../../../../assets/img/shape.png");
-    opacity: 1;
-    top: 20px;
-    width: 580px;
-    height: 683px;
-    transform: rotate(15deg);
-    clip-path: none;
-    border-radius: 100%;
-  }
-
-  .shape-two {
-    background-image: url("../../../../assets/img/shape2.png");
-    opacity: 0;
-    top: 20px;
-    width: 580px;
-    height: 683px;
-    transform: rotate(35deg);
-    clip-path: none;
-    border-radius: 100%;
-  }
-
-  &:hover {
-    .shape-One {
-      opacity: 0;
-    }
-    .shape-two {
-      opacity: 1;
-    }
-  }
+}
+.profil-Img .subject-img {
+  position: relative;
+  display: flex;
+  width: 535px;
+  height: 683px;
+  z-index: 1;
+}
+.profil-Img .shape-One,
+.profil-Img .shape-two {
+  background-position: center bottom;
+  position: absolute;
+  background-size: cover;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+.profil-Img .shape-One {
+  background-image: url("../../../../assets/img/shape.png");
+  opacity: 1;
+  top: 20px;
+  width: 580px;
+  height: 683px;
+  transform: rotate(15deg);
+  clip-path: none;
+  border-radius: 100%;
+}
+.profil-Img .shape-two {
+  background-image: url("../../../../assets/img/shape2.png");
+  opacity: 0;
+  top: 20px;
+  width: 580px;
+  height: 683px;
+  transform: rotate(35deg);
+  clip-path: none;
+  border-radius: 100%;
+}
+.profil-Img:hover .shape-One {
+  opacity: 0;
+}
+.profil-Img:hover .shape-two {
+  opacity: 1;
 }
 
 .logo-Name-section {
@@ -91,15 +85,7 @@ section {
   gap: clamp(80px, 15vw, 230px);
 }
 
-.left-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: center;
-  gap: clamp(3px, 1vw, 5px);
-}
-
+.left-section,
 .left-section-two {
   display: flex;
   flex-direction: column;
@@ -107,6 +93,8 @@ section {
   align-items: flex-start;
   text-align: center;
   gap: clamp(3px, 1vw, 5px);
+}
+.left-section-two {
   display: none;
 }
 
@@ -114,31 +102,25 @@ section {
   position: relative;
   width: clamp(28px, 8vw, 56px);
   height: clamp(20px, 5vw, 38px);
-
-  .logo-1,
-  .logo-2 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.1s all;
-  }
-
-  .logo-1 {
-    opacity: 1;
-  }
-
-  .logo-2 {
-    opacity: 0;
-  }
-
-  &:hover {
-    .logo-1 {
-      opacity: 0;
-    }
-    .logo-2 {
-      opacity: 1;
-    }
-  }
+}
+.logo-container .logo-1,
+.logo-container .logo-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.1s all;
+}
+.logo-container .logo-1 {
+  opacity: 1;
+}
+.logo-container .logo-2 {
+  opacity: 0;
+}
+.logo-container:hover .logo-1 {
+  opacity: 0;
+}
+.logo-container:hover .logo-2 {
+  opacity: 1;
 }
 
 .burger-menu {
@@ -149,37 +131,29 @@ section {
   height: 20px;
   cursor: pointer;
   z-index: 100;
-
-  span {
-    height: 3px;
-    width: 100%;
-    background-color: #f8f5ec;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  &.open {
-    span:nth-child(1) {
-      transform: rotate(45deg) translateY(8px);
-    }
-
-    span:nth-child(2) {
-      opacity: 0;
-    }
-
-    span:nth-child(3) {
-      transform: rotate(-45deg) translateY(-8px);
-    }
-  }
+}
+.burger-menu span {
+  height: 3px;
+  width: 100%;
+  background-color: #f8f5ec;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.burger-menu.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.burger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger-menu.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
 }
 
 .mobile-nav {
   position: absolute;
-
-  left: 50%;
   transform: rotate(0deg);
-  width: 335px;
-  height: 500px;
+  width: 70%;
+  height: 60%;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -187,87 +161,78 @@ section {
   background-image: url("../../../../assets/img/shape.png");
   background-position: center bottom;
   background-size: cover;
-
-  top: 80px;
-  left: 47px;
-  width: 81%;
-  padding: 16px 0;
+  top: 88px;
+  left: 17%;
   z-index: 99;
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    p {
-      font-family: 'JS Regular';
-      font-size: 22px;
-      color: #262E34;
-      padding-bottom: 40px;
-      display: flex;
-      justify-content: center;
-      &:hover{
-        cursor: pointer;
-      }
-    }
-    .language-switch{
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      font-family: 'JS Regular';
-      font-size: 22px;
-      color: #262E34;
-      padding-bottom: 40px;
-    }
-
-    span{
-      &:hover{
-        cursor: pointer;
-        color: #262E34;
-        border-radius: 50%;
-        height: 25px;
-        width: 45px;
-        text-align: center;
-      }
-    };
-
-
-
-    li {
-      text-align: center;
-      padding: 12px 0;
-
-      a {
-        color: #f8f5ec;
-        text-decoration: none;
-        font-size: 18px;
-
-        &:hover {
-          color: #60a5fa;
-        }
-      }
-    }
-  }
+}
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-nav ul p {
+  font-family: 'JS Regular';
+  font-size: 22px;
+  color: #262E34;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+.mobile-nav ul p:hover {
+  cursor: pointer;
+}
+.mobile-nav .language-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-family: 'JS Regular';
+  font-size: 22px;
+  color: #262E34;
+  padding-bottom: 20px;
+}
+.mobile-nav span:hover {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 50%;
+  height: 25px;
+  width: 45px;
+  text-align: center;
+}
+.mobile-nav li {
+  text-align: center;
+  padding: 12px 0;
+}
+.mobile-nav li a {
+  color: #f8f5ec;
+  text-decoration: none;
+  font-size: 18px;
+}
+.mobile-nav li a:hover {
+  color: #60a5fa;
 }
 
 p.active-background {
-
   color: #ffffff !important;
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
-span.active{
+
+span.active {
   background-image: url(../../../../assets/icon/button\ pressed\ small.png);
   background-position: center;
   background-repeat: no-repeat;
   height: 24px;
   width: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
 }
-
-
-
+span.active:hover {
+  color: #fff;
+}
 
 .titel-container {
   text-align: center;
@@ -283,45 +248,41 @@ span.active{
   justify-content: center;
   flex-direction: column;
   gap: clamp(2px, 1vw, 5px);
-
-  img {
-    width: clamp(20px, 5vw, 30px);
-    height: clamp(20px, 5vw, 30px);
-    cursor: pointer;
-  }
+}
+.contact-icons img {
+  width: clamp(20px, 5vw, 30px);
+  height: clamp(20px, 5vw, 30px);
+  cursor: pointer;
 }
 
 .scroll-section {
   display: flex;
   justify-content: center;
   margin-top: clamp(25px, 5vw, 50px);
-
-  img {
-    width: clamp(20px, 6vw, 38px);
-    height: clamp(50px, 15vw, 89px);
-    cursor: pointer;
-  }
+}
+.scroll-section img {
+  width: clamp(20px, 6vw, 38px);
+  height: clamp(50px, 15vw, 89px);
+  cursor: pointer;
 }
 
-@media (max-width: 1130px) {
-  .profil-Img .shape-One {
-    height: 480px;
-    width: 563px;
-    transform: rotate(90deg);
-    top: 75px;
-    left: -70px;
-    right: 5px;
-  }
+/* ---------- MEDIA QUERIES ---------- */
 
+@media (max-width: 1130px) {
+  .profil-Img .shape-One,
   .profil-Img .shape-two {
     height: 480px;
     width: 563px;
-    transform: rotate(75deg);
     top: 75px;
     left: -70px;
     right: 5px;
   }
-
+  .profil-Img .shape-One {
+    transform: rotate(90deg);
+  }
+  .profil-Img .shape-two {
+    transform: rotate(75deg);
+  }
   .profil-Img .subject-img {
     width: 435px;
     height: 583px;
@@ -329,22 +290,19 @@ span.active{
 }
 
 @media (max-width: 1000px) {
-  .profil-Img .shape-One {
-    height: 380px;
-    width: 463px;
-    transform: rotate(120deg);
-    top: 108px;
-    left: -61px;
-  }
-
+  .profil-Img .shape-One,
   .profil-Img .shape-two {
     height: 380px;
     width: 463px;
-    transform: rotate(284deg);
-    top: 81px;
+    top: 108px;
     left: -61px;
   }
-
+  .profil-Img .shape-One {
+    transform: rotate(120deg);
+  }
+  .profil-Img .shape-two {
+    transform: rotate(284deg);
+  }
   .profil-Img .subject-img {
     width: 335px;
     height: 483px;
@@ -356,15 +314,12 @@ span.active{
     flex-direction: column;
     gap: clamp(0px, 15vw, 0px);
   }
-
   .logo-Name-section {
     gap: clamp(0px, 3vw, 0px);
   }
-
   .contact-icons {
     flex-direction: row;
   }
-
   .scroll-section .arrowDown {
     width: 40px;
     height: 70px;
@@ -380,68 +335,171 @@ span.active{
     justify-content: center;
     position: relative;
     border-bottom-left-radius: 200px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
   }
-
   .profil-Img .shape-One {
-    position: absolute;
-    top: 0;
+    top: -0.75px;
     left: 50%;
     transform: rotate(0deg) translateX(-50%);
     width: 335px;
     height: 493px;
-    border-bottom-left-radius: 167px;
-    border-bottom-right-radius: 156px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-    opacity: 1;
-    background-image: url("../../../../assets/img/shape.png");
-    background-position: center bottom;
-    background-size: cover;
-    transition: opacity 0.5s ease-in-out;
     border-radius: 100%;
   }
-
   .profil-Img .shape-two {
     display: none;
   }
 
   .profil-Img .subject-img {
-    position: relative;
-    z-index: 1;
-    border-bottom-left-radius: 200px;
-    border-bottom-right-radius: 200px;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    top: 8px;
   }
 
+  
   .profil-Img:hover .shape-One {
     opacity: 1;
   }
-
   .profil-Img:hover .shape-two {
     opacity: 0;
   }
-
-  .left-section-two {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: center;
-    gap: clamp(3px, 1vw, 5px);
-  }
-
   .left-section {
     display: none;
   }
-
+  .left-section-two {
+    display: flex;
+  }
   .burger-menu {
     display: flex;
   }
+}
 
-  .logo-section,
-  .contact-icons,
-  .scroll-section {
+@media (max-width: 550px) {
+  .mobile-nav {
+    height: 430px;
   }
+  .mobile-nav p {
+    font-size: 22px;
+    padding-bottom: 40px;
+  }
+  p {
+    font-size: 22px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 450px) {
+  .mobile-nav {
+    height: 370px;
+  }
+  p {
+    font-size: 15px !important;
+    padding-bottom: 40px;
+  }
+  .language-switch {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .mobile-nav {
+    height: 40%;
+    width: 80%;
+    left: 9%;
+    top: 119px;
+  }
+  p {
+    font-size: 22px;
+    padding-bottom: 40px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 320px) {
+    header {
+      padding: 0 8px;
+    }
+  
+    .logo-section {
+      gap: 40px;
+    }
+  
+    .logo-container {
+      width: 24px;
+      height: 18px;
+    }
+  
+    .logo-Name-section {
+      gap: 10px;
+    }
+  
+    .contact-icons {
+      gap: 6px;
+    }
+  
+    .contact-icons img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .scroll-section img {
+      width: 30px;
+      height: 60px;
+    }
+  
+    .burger-menu {
+      width: 24px;
+      height: 18px;
+    }
+  
+    .burger-menu span {
+      height: 2px;
+    }
+  
+    .mobile-nav {
+      width: 85%;
+      height: 300px;
+      left: 6%;
+      border-radius: 50%;
+    }
+  
+    .mobile-nav ul p {
+      font-size: 16px;
+      padding-bottom: 30px;
+    }
+  
+    .mobile-nav .language-switch {
+      font-size: 16px;
+      gap: 10px;
+    }
+  
+    span.active {
+      height: 22px;
+      width: 36px;
+      font-size: 14px;
+    }
+  
+    .titel-container {
+      margin-top: 4px;
+    }
+  
+    .profil-Img .shape-One {
+      width: 300px;
+      height: 430px;
+    }
+  
+    .profil-Img .subject-img {
+      width: 300px;
+      height: 430px;
+    }
+  }
+  
+
 }
