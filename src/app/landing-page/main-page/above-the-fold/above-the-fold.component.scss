@@ -20,7 +20,7 @@ section {
 .top-section {
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin: 15px 15px 0px 15px;
 }
 
 .profil-Img {
@@ -152,8 +152,8 @@ section {
 .mobile-nav {
   position: absolute;
   transform: rotate(0deg);
-  width: 70%;
-  height: 60%;
+  width: 74%;
+  height: 48%;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -162,9 +162,10 @@ section {
   background-position: center bottom;
   background-size: cover;
   top: 88px;
-  left: 17%;
+  left: 15%;
   z-index: 99;
 }
+
 .mobile-nav ul {
   list-style: none;
   padding: 0;
@@ -327,9 +328,15 @@ span.active:hover {
 }
 
 @media (max-width: 650px) {
+
   section {
     flex-direction: column;
   }
+
+  .mobile-nav{
+    top: 200px;
+  }
+
   .profil-Img {
     display: flex;
     justify-content: center;
@@ -338,11 +345,11 @@ span.active:hover {
     margin-bottom: 50px;
   }
   .profil-Img .shape-One {
-    top: -0.75px;
+    top: 22.25px;
     left: 50%;
     transform: rotate(0deg) translateX(-50%);
-    width: 335px;
-    height: 493px;
+    width: 330px;
+    height: 446px;
     border-radius: 100%;
   }
   .profil-Img .shape-two {
@@ -352,10 +359,11 @@ span.active:hover {
   .profil-Img .subject-img {
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
-    top: 8px;
+    top: 18px;
+    width: 334px;
+    height: 450px;
   }
 
-  
   .profil-Img:hover .shape-One {
     opacity: 1;
   }
@@ -375,7 +383,11 @@ span.active:hover {
 
 @media (max-width: 550px) {
   .mobile-nav {
-    height: 430px;
+    width: 63%;
+    height: 394px;
+    top: 243px;
+    left: 18%;
+    
   }
   .mobile-nav p {
     font-size: 22px;
@@ -385,11 +397,26 @@ span.active:hover {
     font-size: 22px;
     padding-bottom: 40px;
   }
+
+  .subject-img {
+    width: 262px !important;
+    height: 335px !important;
+  }
+  .shape-One{
+    
+    width: 262px !important;
+    height: 328px !important;
+  
+  }
+
 }
 
 @media (max-width: 450px) {
   .mobile-nav {
-    height: 370px;
+    width: 70%;
+    height: 347px;
+    top: 280px;
+    left: 15%;
   }
   p {
     font-size: 15px !important;
@@ -402,19 +429,32 @@ span.active:hover {
 
 @media (max-width: 400px) {
   .mobile-nav {
-    height: 40%;
-    width: 80%;
-    left: 9%;
-    top: 119px;
+    height: 32%;
+    width: 74%;
+    left: 13%;
+    top: 291px;
   }
   p {
     font-size: 22px;
     padding-bottom: 40px;
   }
 
+  .shape-One{
+    width: 235px !important;
+    height: 300px !important;
+  }
+  
+  .subject-img{
+
+    width: 235px !important;
+    height: 304px !important;
+  
 
 
+  }
 
+
+}
 
 
 
@@ -502,4 +542,4 @@ span.active:hover {
   }
   
 
-}
+
