@@ -94,6 +94,7 @@ section {
   text-align: center;
   gap: clamp(3px, 1vw, 5px);
 }
+
 .left-section-two {
   display: none;
 }
@@ -379,7 +380,8 @@ span.active:hover {
   }
   .logo-Name-section {
     gap: 0px;
-    padding-left: 37px;
+    padding-left: 0px;
+    padding-bottom: 15px;
   }
 
   .contact-icons img {
@@ -388,9 +390,6 @@ span.active:hover {
   }
   .left-section {
     gap: 0px;
-  }
-
-  .logo-container .logo-2 {
   }
 }
 
@@ -404,7 +403,10 @@ span.active:hover {
   }
 
   .mobile-nav {
-    top: 200px;
+    top: 76px;
+    width: 67%;
+    height: 48%;
+    left: 114px;
   }
 
   .profil-Img {
@@ -456,9 +458,6 @@ span.active:hover {
   .logo-2{
     right: 5px;
   }
-
-
-
   .burger-menu {
     display: flex;
   }
@@ -466,10 +465,10 @@ span.active:hover {
 
 @media (max-width: 550px) {
   .mobile-nav {
-    width: 63%;
+    width: 71%;
     height: 394px;
-    top: 243px;
-    left: 18%;
+    top: 57px;
+    left: 15%;
   }
   .mobile-nav p {
     font-size: 22px;
@@ -497,10 +496,10 @@ span.active:hover {
 
 @media (max-width: 450px) {
   .mobile-nav {
-    width: 70%;
-    height: 347px;
-    top: 280px;
-    left: 15%;
+    width: 76%;
+    height: 344px;
+    top: 89px;
+    left: 13%;
   }
   p {
     font-size: 15px !important;
@@ -514,9 +513,9 @@ span.active:hover {
 @media (max-width: 400px) {
   .mobile-nav {
     height: 32%;
-    width: 74%;
-    left: 13%;
-    top: 291px;
+    width: 76%;
+    left: 12%;
+    top: 85px;
   }
   p {
     font-size: 22px;

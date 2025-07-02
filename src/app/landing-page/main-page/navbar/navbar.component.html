@@ -21,25 +21,25 @@
   </div>
   <div class="navbar-link">
     <nav class="navbar-text">
-      <p
+      <p class="why-me-text"
         (click)="toggleBackground('item1'); scrollToSection('about-me')"
         [class.active-background]="selectedItem === 'item1'"
       >
         {{ "NAV.WHY" | translate }}
       </p>
-      <p
+      <p class="navbar-text-decoration"
         (click)="toggleBackground('item2'); scrollToSection('abilities')"
         [class.active-background]="selectedItem === 'item2'"
       >
         {{ "NAV.SKILLS" | translate }}
       </p>
-      <p
+      <p class="navbar-text-decoration"
         (click)="toggleBackground('item3'); scrollToSection('project')"
         [class.active-background]="selectedItem === 'item3'"
       >
         {{ "NAV.PROJECTS" | translate }}
       </p>
-      <p
+      <p class="navbar-text-decoration"
         (click)="toggleBackground('item4'); scrollToSection('contact')"
         [class.active-background]="selectedItem === 'item4'"
       >

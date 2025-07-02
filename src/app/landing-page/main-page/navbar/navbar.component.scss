@@ -3,12 +3,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1222px;
+  width: 100%;
+  max-width: clamp(320px, 100vw, 1440px);
   height: 104px;
   background-color: #89bcd9 !important;
-  padding: 0 109px;
+  padding: 10px 30px 10px 30px;
 
+  margin: 0 auto; // zentriert das Element
   z-index: 1000;
+
   &.fixed {
     position: fixed;
     top: 0px;
@@ -18,11 +21,11 @@
   }
 
   &.original {
-    width: 1222px;
     top: 683px;
     left: 0;
   }
 }
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -40,7 +43,8 @@
   display: flex;
   align-items: center;
   gap: 5rem;
-  p {
+
+  .navbar-text-decoration {
     text-align: center;
     text-rendering: auto;
     margin: 0;
@@ -48,8 +52,25 @@
     list-style: none;
     font-family: "JS Medium";
     color: #262e34;
-    font-size: 1.63rem;
+    font-size: 26px;
     width: 100px;
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  .why-me-text {
+    text-align: center;
+    text-rendering: auto;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "JS Medium";
+    color: #262e34;
+    font-size: 26px;
+    width: 122px;
+
     &:hover {
       color: #fff;
       cursor: pointer;
@@ -57,13 +78,14 @@
   }
 }
 
+
 .language-switch {
   display: flex; 
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
   text-align: center;
-
+  padding-left: 20px;
   .switch {
     border-radius: 999px;
     padding: 0.2rem 0.6rem;
@@ -78,10 +100,8 @@
   border-radius: 999px;
   padding: 0.2rem 0.6rem;
   cursor: pointer;
-
 &:hover{
   cursor: pointer;
-
 }
 }
 
@@ -92,6 +112,7 @@
   justify-content: center;
   text-align: center;
   gap: 5px;
+  padding-right: 20px;
 }
 .logo-container {
   position: relative;
@@ -141,11 +162,67 @@ p.active-background {
   justify-content: center;
   width: 100px;
   height: 56px;
-
 }
 
 p.active {
   color: #ffffff !important;
+}
+
+
+@media (max-width: 1000px) {
+
+  .navbar-text{
+    gap: 4rem;
+  }
+
+}
+
+@media (max-width:950px) {
+
+
+  .navbar-text {
+    gap: 2rem;
+    p {
+      font-size: 23px;
+      width: 120px;
+    }
+  }
+
+  .why-me-text{
+    font-size: 23px !important;
+
+  }
+
+  .navbar-text-decoration{
+    font-size: 23px !important;
+   
+  }
+
+
+}
+@media (max-width: 900px) {
+
+  .navbar-text{
+    gap: 1rem;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .navbar{
+    padding: 10px 5px 10px 5px;
+  }
+  .left-section{
+    padding-right: 20px;
+  }
+
+  .language-switch{
+    padding-left: 10px;
+  }
+  .navbar-text-decoration{
+    width: 80px;
+  }
+
 }
 
 
