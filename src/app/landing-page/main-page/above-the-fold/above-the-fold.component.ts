@@ -115,7 +115,7 @@ export class AboveTheFoldComponent implements OnInit {
   }
 
   checkScreenSize() {
-    this.isMobileView = window.innerWidth <= 650;
+    this.isMobileView = window.innerWidth <= 700;
     if (!this.isMobileView) {
       this.menuOpen = false;
     }

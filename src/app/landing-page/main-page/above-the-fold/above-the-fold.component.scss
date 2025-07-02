@@ -74,15 +74,15 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: clamp(10px, 3vw, 20px);
+  padding-left: 50px;
 }
 
 .logo-section {
-  width: clamp(300px, 40vw, 630px);
+  width: 630px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: clamp(80px, 15vw, 230px);
+  gap: 224px;
 }
 
 .left-section,
@@ -172,9 +172,9 @@ section {
   margin: 0;
 }
 .mobile-nav ul p {
-  font-family: 'JS Regular';
+  font-family: "JS Regular";
   font-size: 22px;
-  color: #262E34;
+  color: #262e34;
   padding-bottom: 40px;
   display: flex;
   justify-content: center;
@@ -187,9 +187,9 @@ section {
   justify-content: center;
   align-items: center;
   gap: 14px;
-  font-family: 'JS Regular';
+  font-family: "JS Regular";
   font-size: 22px;
-  color: #262E34;
+  color: #262e34;
   padding-bottom: 20px;
 }
 .mobile-nav span:hover {
@@ -269,7 +269,18 @@ span.active:hover {
 
 /* ---------- MEDIA QUERIES ---------- */
 
-@media (max-width: 1130px) {
+@media (max-width: 1320px) {
+  .logo-section {
+    width: 500px;
+    gap: 150px;
+  }
+
+  h1 {
+    font-size: 68px;
+  }
+}
+
+@media (max-width: 1180px) {
   .profil-Img .shape-One,
   .profil-Img .shape-two {
     height: 480px;
@@ -288,14 +299,18 @@ span.active:hover {
     width: 435px;
     height: 583px;
   }
+
+  .logo-Name-section {
+    left: 15px;
+  }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
   .profil-Img .shape-One,
   .profil-Img .shape-two {
     height: 380px;
     width: 463px;
-    top: 108px;
+    top: 85px;
     left: -61px;
   }
   .profil-Img .shape-One {
@@ -310,30 +325,85 @@ span.active:hover {
   }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 980px) {
+  .logo-section {
+    width: 400px;
+    gap: 95px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 870px) {
+  .logo-section {
+    width: 300px;
+    gap: 58px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 780px) {
   .logo-section {
     flex-direction: column;
     gap: clamp(0px, 15vw, 0px);
   }
   .logo-Name-section {
-    gap: clamp(0px, 3vw, 0px);
+    gap: 45px;
   }
   .contact-icons {
     flex-direction: row;
   }
   .scroll-section .arrowDown {
-    width: 40px;
-    height: 70px;
+    width: 29px;
+    height: 60px;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 760px) {
+  .logo-section {
+    width: 300px;
+    gap: 0px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+  .logo-Name-section {
+    gap: 0px;
+    padding-left: 37px;
+  }
+
+  .contact-icons img {
+    width: 25px;
+    height: 25px;
+  }
+  .left-section {
+    gap: 0px;
+  }
+
+  .logo-container .logo-2 {
+  }
+}
+
+@media (max-width: 700px) {
+  .burger-menu {
+    display: block;
+  }
 
   section {
     flex-direction: column;
   }
 
-  .mobile-nav{
+  .mobile-nav {
     top: 200px;
   }
 
@@ -375,7 +445,20 @@ span.active:hover {
   }
   .left-section-two {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
   }
+
+  .logo-1{
+    right: 5px;
+  }
+  .logo-2{
+    right: 5px;
+  }
+
+
+
   .burger-menu {
     display: flex;
   }
@@ -387,7 +470,6 @@ span.active:hover {
     height: 394px;
     top: 243px;
     left: 18%;
-    
   }
   .mobile-nav p {
     font-size: 22px;
@@ -402,12 +484,14 @@ span.active:hover {
     width: 262px !important;
     height: 335px !important;
   }
-  .shape-One{
-    
+  .shape-One {
     width: 262px !important;
     height: 328px !important;
-  
   }
+  h3{
+    font-size: 14px;
+  }
+
 
 }
 
@@ -439,107 +523,92 @@ span.active:hover {
     padding-bottom: 40px;
   }
 
-  .shape-One{
+  .shape-One {
     width: 235px !important;
     height: 300px !important;
   }
-  
-  .subject-img{
 
+  .subject-img {
     width: 235px !important;
     height: 304px !important;
-  
-
-
   }
-
-
 }
 
-
-
-
-
-
-
-  @media (max-width: 320px) {
-    header {
-      padding: 0 8px;
-    }
-  
-    .logo-section {
-      gap: 40px;
-    }
-  
-    .logo-container {
-      width: 24px;
-      height: 18px;
-    }
-  
-    .logo-Name-section {
-      gap: 10px;
-    }
-  
-    .contact-icons {
-      gap: 6px;
-    }
-  
-    .contact-icons img {
-      width: 20px;
-      height: 20px;
-    }
-  
-    .scroll-section img {
-      width: 30px;
-      height: 60px;
-    }
-  
-    .burger-menu {
-      width: 24px;
-      height: 18px;
-    }
-  
-    .burger-menu span {
-      height: 2px;
-    }
-  
-    .mobile-nav {
-      width: 85%;
-      height: 300px;
-      left: 6%;
-      border-radius: 50%;
-    }
-  
-    .mobile-nav ul p {
-      font-size: 16px;
-      padding-bottom: 30px;
-    }
-  
-    .mobile-nav .language-switch {
-      font-size: 16px;
-      gap: 10px;
-    }
-  
-    span.active {
-      height: 22px;
-      width: 36px;
-      font-size: 14px;
-    }
-  
-    .titel-container {
-      margin-top: 4px;
-    }
-  
-    .profil-Img .shape-One {
-      width: 300px;
-      height: 430px;
-    }
-  
-    .profil-Img .subject-img {
-      width: 300px;
-      height: 430px;
-    }
+@media (max-width: 320px) {
+  header {
+    padding: 0 8px;
   }
-  
 
+  .logo-section {
+    gap: 40px;
+  }
 
+  .logo-container {
+    width: 24px;
+    height: 18px;
+  }
+
+  .logo-Name-section {
+    gap: 10px;
+  }
+
+  .contact-icons {
+    gap: 6px;
+  }
+
+  .contact-icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scroll-section img {
+    width: 30px;
+    height: 60px;
+  }
+
+  .burger-menu {
+    width: 24px;
+    height: 18px;
+  }
+
+  .burger-menu span {
+    height: 2px;
+  }
+
+  .mobile-nav {
+    width: 85%;
+    height: 300px;
+    left: 6%;
+    border-radius: 50%;
+  }
+
+  .mobile-nav ul p {
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
+
+  .mobile-nav .language-switch {
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  span.active {
+    height: 22px;
+    width: 36px;
+    font-size: 14px;
+  }
+
+  .titel-container {
+    margin-top: 4px;
+  }
+
+  .profil-Img .shape-One {
+    width: 300px;
+    height: 430px;
+  }
+
+  .profil-Img .subject-img {
+    width: 300px;
+    height: 430px;
+  }
+}
