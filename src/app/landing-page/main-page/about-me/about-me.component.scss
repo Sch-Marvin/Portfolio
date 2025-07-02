@@ -6,7 +6,7 @@
   height: 307px;
 }
 section {
-  scroll-margin-top: 150px; 
+  scroll-margin-top: 150px;
 }
 .section-text {
   display: flex;
@@ -27,7 +27,9 @@ h2 {
   font-family: "Anta Regular";
   text-shadow: none;
   color: #6bb1e9;
-  margin-bottom: 1.5rem;
+
+  padding-bottom: 25px;
+  padding-top: 43px;
 }
 
 span {
@@ -36,6 +38,7 @@ span {
 }
 p {
   font-family: "JS Medium";
+  text-align: justify;
 }
 
 .section-image {
@@ -47,9 +50,10 @@ p {
 }
 
 img {
-  width: 35px;
-  height: 30px;
+  width: 65px;
+  height: 50px;
   padding-right: 13px;
+  padding-bottom: 6px;
 }
 
 .located {
@@ -93,4 +97,88 @@ button {
 button:hover {
   background: #89bcd95f;
   color: #1e242b;
+}
+
+@media (max-width: 830px) {
+  .section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap:25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap:25px;
+  }
+
+  img {
+    width: 48px;
+    height: 38px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 60px;
+    font-family: "Anta Regular";
+    text-shadow: none;
+    color: #6bb1e9;
+    padding-bottom: 25px;
+    padding-top: 43px;
+  }
+
+  span {
+    font-family: "JS Bold";
+    padding-right: 5px;
+  }
+  p {
+    font-family: "JS Medium";
+    font-size: 17px;
+  }
+
+
+}
+
+@media (max-width: 400px) {
+  .section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap:25px;
+  }
+
+  img {
+    width: 48px;
+    height: 38px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  h2 {
+    font-size: 60px;
+    font-family: "Anta Regular";
+    text-shadow: none;
+    color: #6bb1e9;
+    padding-bottom: 25px;
+    padding-top: 43px;
+  }
+
+  span {
+    font-family: "JS Bold";
+    padding-right: 5px;
+  }
+  p {
+    font-family: "JS Medium";
+    font-size: 14px;
+  }
+
+
 }
