@@ -39,6 +39,16 @@ span {
 p {
   font-family: "JS Medium";
   text-align: justify;
+  line-height: 1.6;
+  letter-spacing: 0;
+  max-width: 700px;
+  margin: auto;
+  font-size: 16px;
+  padding: 0 20px;
+  hyphens: auto;
+  word-break: break-word;
+
+
 }
 
 .section-image {
@@ -107,6 +117,14 @@ button:hover {
     text-align: center;
     gap:25px;
   }
+
+  button{
+    font-size: 16px;
+  }
+  .button{
+    justify-content: center;
+  }
+  
 }
 
 @media (max-width: 500px) {
@@ -141,6 +159,9 @@ button:hover {
   p {
     font-family: "JS Medium";
     font-size: 17px;
+  }
+  button{
+    font-size: 16px;
   }
 
 
@@ -178,7 +199,14 @@ button:hover {
   p {
     font-family: "JS Medium";
     font-size: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 90%; /* schmaler = mehr Umbrüche */
+    margin: 0 auto;
+    padding: 0 12px;
+    text-align: left; /* oder center, aber kein justify */
   }
 
 
 }
+
