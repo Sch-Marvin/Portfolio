@@ -3,7 +3,7 @@ section {
   justify-content: center;
   align-items: center;
 }
-section{
+section {
   scroll-margin-top: 100px;
 }
 .content {
@@ -104,19 +104,163 @@ p {
 }
 
 span {
-  font-family: 'JS Regular';
+  font-family: "JS Regular";
   font-size: 18px;
   color: #f8f5ec;
   text-align: center;
 }
 
-.currently{
+.currently {
   width: 194px;
   height: 23px;
 }
 
-.learning-text{
+.learning-text {
   width: 307px;
   height: 105px;
   text-align: center;
+}
+
+@media (max-width: 850px) {
+  .my-skills {
+    width: 386px;
+    height: 398px;
+    gap: 30px;
+  }
+  section {
+    margin-top: 20px;
+  }
+
+  .about-to-text {
+    height: 238px;
+    width: 330px;
+  }
+
+  .icon-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 750px) {
+  .my-skills {
+    width: 386px;
+    height: 398px;
+    gap: 20px;
+  }
+  section {
+    margin-top: 20px;
+  }
+
+  .icon-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .learning-text {
+    width: 281px;
+  }
+
+  .skill-container {
+    gap: 20px;
+    width: 396px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 700px) {
+  .my-skills {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 15px;
+  }
+  .content {
+    margin-top: 0px;
+  }
+  section {
+    margin-top: 100px;
+  }
+
+  .skill-container {
+    margin-top: 200px;
+  }
+  .learning {
+    margin-top: 30px;
+  }
+  .about-to-text {
+    height: 312px;
+    width: 333px;
+  }
+}
+
+@media (max-width: 500px) {
+  .my-skills {
+    align-items: center;
+  }
+
+  .skill-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 370px;
+    height: 299px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .learning {
+    width: 310px;
+    height: 327px;
+  }
+
+  .learning-text {
+    width: 235px;
+  }
+  span {
+    font-size: 16px;
+  }
+
+  .about-to-text{
+      height: 289px;
+      width: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .my-skills {
+    align-items: center;
+  }
+
+  .skill-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 328px;
+    height: 220px;
+    justify-content: center;
+    align-items: center;
+    gap: 1;
+  }
+
+  .icon-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .learning {
+    width: 310px;
+    height: 327px;
+  }
+
+  .learning-text {
+    width: 235px;
+  }
+  span {
+    font-size: 16px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .about-to-text{
+    width: 278px;
+  }
 }
