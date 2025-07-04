@@ -4,13 +4,18 @@ section {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  width: 100%;
+  max-width: clamp(320px, 100vw, 1440px);
+  margin: 0 auto;
 }
 .overlay {
-  width: 1199px;
-  height: 517px;
-  padding-left: 123px;
-  display: flex;
-  flex-direction: column;
+  
+    padding-left: 123px;
+    width: 880px;
+    height: 517px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
 }
 .text-section {
   display: flex;
@@ -27,7 +32,6 @@ section {
     color: #f8f5ec;
     font-size: 18px;
     font-family: "JS Regular";
-
   }
 }
 
@@ -46,8 +50,8 @@ h3 {
 
 .technologie-section {
   height: 517px;
-  width: 453px;
-  padding-right: 117px;
+  width: 515px;
+  padding-right: 65px;
   p {
     display: flex;
     justify-content: center;
@@ -61,9 +65,9 @@ h3 {
     height: 312px;
   }
 }
-.project-image{
+.project-image {
   transition: transform 0.3s ease-in-out;
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 }
@@ -108,8 +112,16 @@ button {
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-&:hover{
-  background: #ffffff;
-  color: #1e242b;
+  &:hover {
+    background: #ffffff;
+    color: #1e242b;
+  }
 }
+
+@media (max-width: 1250px) {
+
+
+
+
+
 }
