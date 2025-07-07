@@ -3,18 +3,18 @@ section {
   height: 548px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   max-width: clamp(320px, 100vw, 1440px);
   margin: 0 auto;
+
 }
 .overlay {
-  padding-left: 123px;
+  padding-left: 100px;
   width: 880px;
-  height: 517px;
+  height: 490px;
   display: flex;
   flex-direction: column;
-  padding-right: 20px;
 }
 .text-section {
   display: flex;
@@ -33,24 +33,27 @@ section {
     font-family: "JS Regular";
   }
 }
-.title{
+.title {
   display: none;
+}
+.first-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-right: 50px;
+  p{
+    color: #F8F5EC;
+    font-size: 18px;
+
+  }
 }
 
 .overlay-2 {
-  padding-left: 9px;
-  width: 530px;
-  height: 541px;
-  display: flex;
-  flex-direction: column;
-  padding-right: 20px;
+  padding-top: 30px;
   display: none;
 }
-.technologie-section {
-  height: 541px;
-  width: 474px;
-  padding-right: 31px;
-}
+
 .text-section {
   display: flex;
   padding-bottom: 32px;
@@ -67,10 +70,8 @@ section {
     font-size: 18px;
     font-family: "JS Regular";
     width: 462px;
-    
   }
 }
-
 h3 {
   font-size: 28px;
   font-family: "JS Light";
@@ -83,23 +84,13 @@ h3 {
     padding-left: 15px;
   }
 }
-
+h4 {
+  font-family: "JS Regular";
+  font-size: 50px;
+  color: #89bcd9;
+}
 .technologie-section {
-  height: 517px;
-  width: 515px;
-  padding-right: 65px;
-  p {
-    display: flex;
-    justify-content: center;
-    color: #f8f5ec;
-    font-size: 18px;
-    font-family: "JS Light";
-    padding-bottom: 12px;
-  }
-  img {
-    width: 453px;
-    height: 312px;
-  }
+  display: none;
 }
 .project-image {
   transition: transform 0.3s ease-in-out;
@@ -107,7 +98,6 @@ h3 {
     transform: scale(1.1);
   }
 }
-
 .icons {
   display: flex;
   justify-content: center;
@@ -119,11 +109,11 @@ h3 {
     transition: transform 0.3s ease-in-out;
   }
 }
-.icons-2{
+
+.icons-2 {
   display: flex;
-  
-  padding-bottom: 12px;
-  gap: 32px;
+  gap: 15px;
+  padding-left: 5px;
   .icon-img {
     width: 32px;
     height: 36px;
@@ -148,6 +138,12 @@ h3 {
   gap: 40px;
   padding-top: 24px;
 }
+.button-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
 
 button {
   background: transparent;
@@ -171,10 +167,10 @@ button {
     height: 48px;
   }
   section {
-    height: 488px;
+  
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 100%;
     max-width: clamp(320px, 100vw, 1440px);
     margin: 0 auto;
@@ -183,34 +179,11 @@ button {
   .overlay {
     padding-left: 75px;
     width: 880px;
-    height: 440px;
+    height: 456px;
     display: flex;
     flex-direction: column;
-    padding-right: 20px;
   }
-  .technologie-section {
-    height: 476px;
-    width: 515px;
-    padding-right: 65px;
-  }
-  .text-section {
-    display: flex;
-    padding-bottom: 32px;
-    width: 600px;
-    height: 132px;
-    img {
-      width: 29px;
-      height: 26px;
-    }
-    p {
-      padding-left: 29px;
-      padding-top: 9px;
-      color: #f8f5ec;
-      font-size: 18px;
-      font-family: "JS Regular";
-      
-    }
-  }
+
 }
 
 @media (max-width: 1150px) {
@@ -226,6 +199,10 @@ button {
     width: 100%;
     max-width: clamp(320px, 100vw, 1440px);
     margin: 0 auto;
+  }
+  .first-section{
+    padding-right: 0;
+    padding-top: 90px;
   }
 
   .overlay {
@@ -259,12 +236,9 @@ button {
       font-size: 18px;
       font-family: "JS Regular";
       width: 462px;
-      
     }
   }
 }
-
-
 
 @media (max-width: 1000px) {
   nav {
@@ -272,26 +246,25 @@ button {
     height: 48px;
   }
   section {
-    height: 1210px;
+    height: 1100px;
     width: 100%;
     max-width: clamp(320px, 100vw, 1440px);
     margin: 0 auto;
   }
-
+  .button {
+    padding-top: 86px;
+  }
   .overlay {
-    padding-left: 9px;
-    width: 530px;
-    height: 541px;
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px;
     display: none;
   }
   .technologie-section {
     height: 541px;
     width: 474px;
-    padding-right: 31px;
-    padding-top: 150px;
+    padding-right: 0px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
   }
   .text-section {
     display: flex;
@@ -311,24 +284,38 @@ button {
       width: 462px;
     }
   }
-  .title{
-    display: block;
+  .first-section {
+    display: none;
   }
 
-  .overlay-2{
+  .justatest {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+
+  .secend-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 35px;
+    gap: 10px;
+    padding-bottom: 15px;
+  }
+  .title {
     display: block;
+  }
+  span {
+    color: #fff;
+  }
+  .overlay-2 {
+    display: block;
+  }
+  .justatest {
+    color: #fff;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 600px) {
+  
+}
