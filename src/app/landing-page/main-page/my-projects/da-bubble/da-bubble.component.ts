@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { MyProjectsComponent } from "../my-projects.component";
 
 @Component({
   selector: 'app-da-bubble',
   standalone: true,
-  imports: [],
+  imports: [MyProjectsComponent],
   templateUrl: './da-bubble.component.html',
   styleUrl: './da-bubble.component.scss'
 })
