@@ -7,7 +7,6 @@ section {
   width: 100%;
   max-width: clamp(320px, 100vw, 1440px);
   margin: 0 auto;
-
 }
 .overlay {
   padding-left: 100px;
@@ -42,10 +41,9 @@ section {
   align-items: center;
   gap: 10px;
   padding-right: 50px;
-  p{
-    color: #F8F5EC;
+  p {
+    color: #f8f5ec;
     font-size: 18px;
-
   }
 }
 
@@ -143,6 +141,7 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  padding-top: 33px;
 }
 
 button {
@@ -167,7 +166,6 @@ button {
     height: 48px;
   }
   section {
-  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +181,6 @@ button {
     display: flex;
     flex-direction: column;
   }
-
 }
 
 @media (max-width: 1150px) {
@@ -192,7 +189,7 @@ button {
     height: 48px;
   }
   section {
-    height: 632px;
+    height: 580px;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -200,9 +197,9 @@ button {
     max-width: clamp(320px, 100vw, 1440px);
     margin: 0 auto;
   }
-  .first-section{
+  .first-section {
     padding-right: 0;
-    padding-top: 90px;
+    padding-top: 60px;
   }
 
   .overlay {
@@ -212,7 +209,7 @@ button {
     display: flex;
     flex-direction: column;
     padding-right: 20px;
-    padding-top: 100px;
+    padding-top: 50px;
   }
   .technologie-section {
     height: 541px;
@@ -246,7 +243,7 @@ button {
     height: 48px;
   }
   section {
-    height: 1100px;
+    height: 1150px;
     width: 100%;
     max-width: clamp(320px, 100vw, 1440px);
     margin: 0 auto;
@@ -275,13 +272,17 @@ button {
       width: 29px;
       height: 26px;
     }
+    span {
+      display: none;
+    }
     p {
       padding-left: 29px;
       padding-top: 9px;
       color: #f8f5ec;
       font-size: 18px;
       font-family: "JS Regular";
-      width: 462px;
+      width: 454px;
+      text-align: justify;
     }
   }
   .first-section {
@@ -316,6 +317,41 @@ button {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
+  .secend-section {
+    width: 380px;
+  }
+
+  .project-image {
+    width: 324px;
+  }
+  .technologie-section {
+    align-items: center;
+  }
+
+    .text-section {
+      width: 474px;
+      height: 120px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      h3 {
+        font-size: 20px;
+        padding-left: 5px;
+      }
+
+      p {
+        font-size: 14px;
+        width: 380px;
+      }
+      .title-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   
 }
