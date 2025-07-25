@@ -1,5 +1,4 @@
 <section id="contact">
-
   <h2>{{ "CONTACT.TITLE" | translate }}</h2>
 
   <div class="arrowUp">
@@ -20,14 +19,14 @@
       {{ "CONTACT.EXAMPLE" | translate }}
     </span>
 
-    <div class="contect-information">
-      <span class="contect-email">
+    <div class="contact-information">
+      <span class="contact-email">
         <p>
           <img src="../../../../assets/icon/Contact/contact_email.svg" alt="Email Icon" />
           {{ "CONTACT.EMAIL_LABEL" | translate }}: marvinschneemann&#64;gmx.de
         </p>
       </span>
-      <span class="contect-email">
+      <span class="contact-email">
         <p>
           <img src="../../../../assets/icon/Contact/contact_phone_.svg" alt="Phone Icon" />
           {{ "CONTACT.PHONE_LABEL" | translate }}: 0151-62947199
@@ -96,7 +95,7 @@
     </div>
 
     <!-- PRIVACY CHECKBOX mit ICON -->
-    <div class="botten-section">
+    <div class="button-section">
       <div class="custom-checkbox">
         <input
           type="checkbox"
@@ -117,10 +116,11 @@
           ></span>
 
           <span class="privacy-text">
-            &nbsp;&nbsp;{{ "CONTACT.FORM.PRIVACY_TEXT" | translate }}
+            {{ "CONTACT.FORM.PRIVACY_TEXT" | translate }}
             <a href="/privacy-policy" target="_blank">{{ "CONTACT.FORM.PRIVACY_LINK" | translate }}</a>
             {{ "CONTACT.FORM.PRIVACY_CONTINUE" | translate }}
           </span>
+          
         </label>
 
         <span class="error-msg" *ngIf="privacy.invalid && (privacy.touched || contactForm.submitted)">
@@ -137,5 +137,21 @@
         {{ "CONTACT.FORM.SUBMIT" | translate }}
       </button>
     </div>
+
+
+    <div class="arrowUp-2">
+      <span *ngFor="let scroll of scrollIcons">
+        <img
+          (click)="scrollToSection('about-me')"
+          [src]="scroll.current"
+          (mouseenter)="onScrollHover(scroll.id)"
+          (mouseleave)="onScrollLeave(scroll.id)"
+          [alt]="scroll.id + ' icon'"
+        />
+      </span>
+    </div>
+
+
+
   </form>
 </section>

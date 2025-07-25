@@ -1,14 +1,18 @@
-/* =======================================
-   🧱 Allgemeine Layout- & Grundelemente
-======================================= */
 body {
   background-color: #131d23;
   font-family: "Quantico-Regular", sans-serif;
   color: white;
   width: 1440px;
 }
+
 .arrowUp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-left: 1250px;
+}
+.arrowUp-2 {
+  display: none;
 }
 
 #contact {
@@ -16,6 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
 .contact-text {
   max-width: 1440px;
   height: 124px;
@@ -24,73 +29,63 @@ body {
   justify-content: center;
   padding-bottom: 48px;
 }
+
 .text {
-  width: 429px;
+  width: 595px;
   height: 124px;
   font-family: "JS Regular";
   font-size: 20px;
-  color: #F8F5EC;
+  color: #f8f5ec;
   text-align: left;
   padding-right: 36px;
 }
 
-nav {
+.contact-information {
   display: flex;
-  justify-content: center;
-  gap: 36px;
+  justify-content: space-between;
+  height: 124px;
+  padding-bottom: 16px;
+  flex-direction: column;
 }
+
+.contact-email {
+  height: 445px;
+}
+
 p {
-  font-family: 'JS Regular';
+  font-family: "JS Regular";
   font-size: 20px;
   text-align: center;
   display: flex;
-  align-items: center;
-  color: #F8F5EC;
+  color: #f8f5ec;
   padding-bottom: 16px;
 
   img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding-right: 20px;
   }
-
-  contect-email {
-    height: 445px;
-  }
-
-  contect-information {
-    display: flex;
-    justify-content: space-between;
-    height: 124px;
-    padding-bottom: 16px;
-  }
 }
-
-/* =======================================
-   📄 Formular-Layout & Container
-======================================= */
 
 form {
   width: 1440px;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 35px;
 }
+
 .form-row {
   display: flex;
   justify-content: center;
   width: 100%;
   gap: 30px;
 }
-
-/* =======================================
-   🏷️ Label & Eingabefelder
-======================================= */
 
 label {
   padding-left: 40px;
@@ -99,22 +94,15 @@ label {
   font-size: 14px;
 }
 
-label.checkbox-line{
-  padding-top: 0 ;
-  padding-right: 150px ;
-  font-size: 50px;
-}
-
-
-
 .input-label {
   display: flex;
   flex-direction: column;
   padding-top: 16px;
 }
+
 .textarea-label {
   width: 100%;
-  max-width: 1004px;
+  max-width: 1035px;
   display: flex;
   justify-content: center;
 }
@@ -124,9 +112,9 @@ textarea {
   background-color: #262e34;
   border: 1px solid #6bb1e9;
   color: white;
-  transition: background-color 0.3s ease;
   font-size: 16px;
   padding: 12px 20px;
+  transition: background-color 0.3s ease;
 
   &:focus {
     background-color: #1e2a30;
@@ -135,58 +123,26 @@ textarea {
 }
 
 input {
-  width: 445px;
+  width: 500px;
   height: 60px;
   border-radius: 100px;
 }
+
 textarea {
   height: 146px;
   border-radius: 25px;
   resize: none;
 }
 
-/* =======================================
-   ✅ Footer: Checkbox & Datenschutzhinweis
-======================================= */
-
-.form-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 911px;
-  gap: 20px;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-
-  a {
-    color: #6bb1e9;
-    text-decoration: none;
-  }
-}
-
-/* =======================================
-   ⚠️ Fehlermeldung
-======================================= */
-
 .error-msg {
   color: red;
   font-size: 0.9rem;
   margin-top: 6px;
-  display: block;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  padding-left: 64px;
+  padding-left: 35px;
+  width: 100%;
 }
-
-/* =======================================
-   🖋️ Überschrift
-======================================= */
 
 h2 {
   font-size: 60px;
@@ -200,55 +156,44 @@ h2 {
   align-items: center;
 }
 
-/* =======================================
-   ✅ Custom Checkbox Styling (neu)
-======================================= */
-
 .custom-checkbox {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
   margin-top: 1rem;
-  gap: 10px;
 
   input[type="checkbox"] {
-    display: none; // Native Checkbox verstecken
+    display: none;
   }
 
   label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    position: relative;
+    padding-left: 34px; // Platz für Checkbox + Abstand
+    font-size: 14px;
+    line-height: 1.6;
+    color: #f8f5ec;
+    display: block;
   }
 
   .checkbox-image {
+    position: absolute;
+    top: 2px;
+    left: 0;
     width: 24px;
     height: 24px;
     background-size: cover;
     background-repeat: no-repeat;
-    display: inline-block;
-    flex-shrink: 0;
-    background-image: url('../../../../assets/icon/Contact/Checkbox-empty.svg');
+    background-image: url("../../../../assets/icon/Contact/Checkbox-empty.svg");
 
     &.checked {
-      background-image: url('../../../../assets/icon/Contact/Checkbox-checked.svg');
+      background-image: url("../../../../assets/icon/Contact/Checkbox-checked.svg");
     }
 
     &.error {
-      background-image: url('../../../../assets/icon/Contact/Checkbox-error.svg') !important;
+      background-image: url("../../../../assets/icon/Contact/Checkbox-error.svg") !important;
     }
   }
 }
 
-/* =======================================
-   🔘 Button (Absenden)
-======================================= */
-
 .contact-submit-button {
-  align-self: flex-end;
   text-align: center;
-  
-  
   background-color: transparent;
   border: 1px solid #6bb1e9;
   color: white;
@@ -259,6 +204,7 @@ h2 {
   transition: all 0.3s ease;
   width: 101px;
   height: 48px;
+  margin-top: 5px;
 
   &:hover {
     background-color: #6bb1e9;
@@ -271,23 +217,17 @@ h2 {
   }
 }
 
-.arrowUp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .privacy-text {
-  color: #F8F5EC;
+  display: inline;
+  color: #f8f5ec;
   font-size: 14px;
-  &:hover{
-    cursor:default;
-  }
 
+  &:hover {
+    cursor: default;
+  }
 }
 
-
-.botten-section {
+.button-section {
   width: 930px;
   height: 80px;
   display: flex;
@@ -296,8 +236,156 @@ h2 {
 }
 
 a {
-  font-family: 'JS Regular';
-  color: #89BCD9;
+  font-family: "JS Regular";
+  color: #89bcd9;
   font-size: 14px;
 }
 
+@media (max-width: 1300px) {
+  .arrowUp {
+    padding-left: 1100px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .arrowUp {
+    padding-left: 900px;
+  }
+  .text {
+    width: 405px;
+  }
+
+  input {
+    width: 400px;
+  }
+  .textarea-label {
+    width: 830px;
+  }
+
+  .button-section {
+    width: 830px;
+  }
+}
+
+@media (max-width: 950px) {
+  .arrowUp {
+    padding-left: 700px;
+  }
+
+  .contact-text {
+    flex-direction: column-reverse;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 600px;
+  }
+
+  .contact-information {
+    flex-direction: column-reverse;
+  }
+
+  .textarea-label {
+    width: 600px;
+  }
+
+  .text {
+    width: 600px;
+    padding-right: 0;
+  }
+
+  .button-section {
+    width: 600px;
+  }
+
+  p img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 750px) {
+  .arrowUp {
+    display: none;
+  }
+  .arrowUp-2 {
+    display: block;
+    padding: 30px;
+  }
+  .contact-text {
+    padding-top: 100px;
+  }
+
+  .contact-form {
+    padding-top: 80px;
+  }
+
+  .contact-email {
+    height: 35px;
+  }
+
+  .button-section {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .text {
+    width: 470px;
+  }
+  input {
+    width: 470px;
+  }
+
+  .textarea-label {
+    width: 470px;
+  }
+  .button-section {
+    width: 435px;
+  }
+}
+@media (max-width: 500px) {
+  .text {
+    width: 275px;
+    font-size: 15px;
+    align-self: anchor-center;
+  }
+  input {
+    width: 275px;
+  }
+  p {
+    font-size: 15px;
+    img {
+      width: 35px;
+    }
+  }
+  .textarea-label {
+    width: 275px;
+  }
+  .button-section {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+  }
+  .contact-submit-button {
+    align-self: flex-end;
+  }
+  label {
+    padding-left: 20px;
+  }
+  .arrowUp-2 {
+    padding-top: 125px;
+    padding-bottom: 15px;
+  }
+  .error-msg {
+    font-size: 14px;
+    margin-top: 2px;
+    padding-left: 26px;
+  }
+  .form-row{
+    gap: 0;
+  }
+}
