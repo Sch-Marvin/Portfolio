@@ -4,7 +4,7 @@
   <div class="arrowUp">
     <span *ngFor="let scroll of scrollIcons">
       <img
-        (click)="scrollToSection('about-me')"
+        (click)="scrollToSection('abf-scroll')"
         [src]="scroll.current"
         (mouseenter)="onScrollHover(scroll.id)"
         (mouseleave)="onScrollLeave(scroll.id)"
@@ -142,7 +142,7 @@
     <div class="arrowUp-2">
       <span *ngFor="let scroll of scrollIcons">
         <img
-          (click)="scrollToSection('about-me')"
+          (click)="scrollToSection('abf-scroll')"
           [src]="scroll.current"
           (mouseenter)="onScrollHover(scroll.id)"
           (mouseleave)="onScrollLeave(scroll.id)"
