@@ -1,14 +1,20 @@
 section {
-  height: 200px;
+  height: 170px;
   display: flex;
-  align-items: center;
   justify-content: center;
   background-color: #89bcd9;
+}
+
+.section-two{
+  display: none;
 }
 .overlay-footer {
   width: 1216px;
   height: 72px;
   padding-top: 75px;
+  padding-left: 15px;
+  padding-right: 15px;
+
   display: flex;
   justify-content: space-between;
 }
@@ -45,6 +51,10 @@ section {
     }
   }
 }
+.logo-container {
+  padding-right: 6px;
+}
+
 .footer-text {
   display: flex;
   flex-direction: column;
@@ -61,7 +71,41 @@ section {
   font-size: 18px;
   color: #262e34;
 }
+.logo-section-2 {
+  display: none;
+}
 
+@media (max-width: 500px) {
+  section {
+    display: none;
+  }
+  .overlay-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 10px;
+  }
+  .logo-section {
+    display: none;
+  }
+  .logo-section-2 {
+    display: block;
+  }
 
+  .footer-text {
+    flex-direction: row;
+    justify-content: center;
+    gap: 123px;
+  }
+  .section-two{
+    display: flex;
+    height: 205px;
 
+  }
 
+  .footer-text{
+    flex-direction: column;
+    align-items: center;
+    gap:0;
+  }
+}
