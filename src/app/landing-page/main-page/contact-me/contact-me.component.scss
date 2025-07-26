@@ -22,50 +22,52 @@ body {
 }
 
 .contact-text {
-  max-width: 1440px;
+  width: 1440px;
   height: 124px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-bottom: 48px;
+  gap: 45px;
 }
 
 .text {
-  width: 595px;
-  height: 124px;
   font-family: "JS Regular";
   font-size: 20px;
   color: #f8f5ec;
   text-align: left;
-  padding-right: 36px;
+  width: 429px;
 }
 
 .contact-information {
   display: flex;
   justify-content: space-between;
-  height: 124px;
-  padding-bottom: 16px;
   flex-direction: column;
+  width: 445px;
 }
 
-.contact-email {
-  height: 445px;
-}
-
-p {
-  font-family: "JS Regular";
-  font-size: 20px;
-  text-align: center;
+.contact-entry {
   display: flex;
-  color: #f8f5ec;
+  align-items: center;
+  gap: 20px;
   padding-bottom: 16px;
-
+  color: #f8f5ec;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   img {
-    width: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-right: 20px;
+    width: 35px;
+  }
+  &:hover {
+    color: #6bb1e9;
+
+    a {
+      color: #6bb1e9;
+    }
+
+    img {
+      width: 30px;
+    }
   }
 }
 
@@ -251,10 +253,10 @@ a {
   .arrowUp {
     padding-left: 900px;
   }
-  .text {
-    width: 405px;
-  }
 
+  .contact-information {
+    width: 320px;
+  }
   input {
     width: 400px;
   }
@@ -274,6 +276,14 @@ a {
 
   .contact-text {
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    gap: 0;
+  }
+  .contact-information {
+    flex-direction: column-reverse;
+    width: 548px;
   }
 
   .form-row {
@@ -284,18 +294,11 @@ a {
   input {
     width: 600px;
   }
-
-  .contact-information {
-    flex-direction: column-reverse;
-  }
-
   .textarea-label {
     width: 600px;
   }
-
   .text {
-    width: 600px;
-    padding-right: 0;
+    width: 548px;
   }
 
   .button-section {
@@ -320,7 +323,7 @@ a {
   }
 
   .contact-form {
-    padding-top: 80px;
+    padding-top: 65px;
   }
 
   .contact-email {
@@ -334,7 +337,10 @@ a {
 
 @media (max-width: 650px) {
   .text {
-    width: 470px;
+    width: 430px;
+  }
+  .contact-information {
+    width: 430px;
   }
   input {
     width: 470px;
@@ -349,10 +355,42 @@ a {
 }
 @media (max-width: 500px) {
   .text {
-    width: 275px;
+    width: 240px;
     font-size: 15px;
     align-self: anchor-center;
   }
+  .contact-information {
+    width: 240px;
+  }
+
+  .contact-entry {
+    align-items: end;
+    gap: 6px;
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  img {
+    width: 20px;
+  }
+  &:hover {
+    color: #6bb1e9;
+
+    a {
+      color: #6bb1e9;
+    }
+
+    img {
+      width: 20px;
+    }
+  }
+  }
+
+  .contact-form {
+    padding-top: 50px;
+  }
+
   input {
     width: 275px;
   }
@@ -385,7 +423,7 @@ a {
     margin-top: 2px;
     padding-left: 26px;
   }
-  .form-row{
+  .form-row {
     gap: 0;
   }
 }

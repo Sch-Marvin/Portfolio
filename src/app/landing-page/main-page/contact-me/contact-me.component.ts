@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -65,6 +65,33 @@ export class ContactMeComponent {
     },
   ];
 
+  hoverIconEMail =[
+
+    {
+      id: 'EMail',
+      default: '../../../../assets/icon/Contact/contact_email.svg',
+      hover: '../../../../assets/icon/Contact/E-Mail-hover.svg',
+      current: '../../../../assets/icon/Contact/contact_email.svg'
+    },
+  ];
+
+
+  hoverIconPhone=[
+
+    {
+      id: 'Phone',
+      default: '../../../../assets/icon/Contact/contact_phone_.svg',
+      hover: '../../../../assets/icon/Contact/phone-hover.svg',
+      current: '../../../../assets/icon/Contact/contact_phone_.svg'
+    },
+  ]
+
+
+
+
+
+
+
   onScrollHover(id: string) {
     const icon = this.scrollIcons.find(i => i.id === id);
     if (icon) icon.current = icon.hover;
@@ -84,6 +111,28 @@ export class ContactMeComponent {
       }, 500);
     }
   }
+
+  onIconHoverEMail(id: string) {
+    const icon = this.hoverIconEMail.find((i) => i.id === id);
+    if (icon) icon.current = icon.hover;
+  }
+
+  onIconLeaveEMail(id: string) {
+    const icon = this.hoverIconEMail.find((i) => i.id === id);
+    if (icon) icon.current = icon.default;
+  }
+
+  onIconHoverPhone(id: string) {
+    const icon = this.hoverIconPhone.find((i) => i.id === id);
+    if (icon) icon.current = icon.hover;
+  }
+
+  onIconLeavePhone(id: string) {
+    const icon = this.hoverIconPhone.find((i) => i.id === id);
+    if (icon) icon.current = icon.default;
+  }
+
+
 
   smoothBounce(offset: number, duration: number) {
     const start = window.scrollY;

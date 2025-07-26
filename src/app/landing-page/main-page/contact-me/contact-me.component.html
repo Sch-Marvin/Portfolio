@@ -20,22 +20,37 @@
     </span>
 
     <div class="contact-information">
-      <span class="contact-email">
-        <p>
-          <img src="../../../../assets/icon/Contact/contact_email.svg" alt="Email Icon" />
+      <span
+        class="contact-entry"
+        *ngFor="let hover of hoverIconEMail"
+        (mouseenter)="onIconHoverEMail(hover.id)"
+        (mouseleave)="onIconLeaveEMail(hover.id)"
+      >
+        <img [src]="hover.current" [alt]="hover.id + ' icon'" />
+        <a href="mailto:marvinschneemann@gmx.de">
           {{ "CONTACT.EMAIL_LABEL" | translate }}: marvinschneemann&#64;gmx.de
-        </p>
+        </a>
       </span>
-      <span class="contact-email">
-        <p>
-          <img src="../../../../assets/icon/Contact/contact_phone_.svg" alt="Phone Icon" />
+<!-- <img class="IMG-EMAIL" src="../../../../assets/icon/Contact/E-Mail-hover.svg" alt=""> -->
+      <span
+        class="contact-entry"
+        *ngFor="let hover of hoverIconPhone"
+        (mouseenter)="onIconHoverPhone(hover.id)"
+        (mouseleave)="onIconLeavePhone(hover.id)"
+      >
+        <img [src]="hover.current" [alt]="hover.id + ' icon'" />
+        <a href="tel:015162947199">
           {{ "CONTACT.PHONE_LABEL" | translate }}: 0151-62947199
-        </p>
+        </a>
       </span>
     </div>
   </div>
 
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact-form">
+  <form
+    (ngSubmit)="onSubmit(contactForm)"
+    #contactForm="ngForm"
+    class="contact-form"
+  >
     <div class="form-row">
       <!-- NAME -->
       <div class="input-label">
@@ -65,10 +80,16 @@
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           #email="ngModel"
         />
-        <span class="error-msg" *ngIf="email.errors?.['required'] && email.touched">
+        <span
+          class="error-msg"
+          *ngIf="email.errors?.['required'] && email.touched"
+        >
           {{ "CONTACT.FORM.ERRORS.EMAIL_REQUIRED" | translate }}
         </span>
-        <span class="error-msg" *ngIf="email.errors?.['pattern'] && email.touched">
+        <span
+          class="error-msg"
+          *ngIf="email.errors?.['pattern'] && email.touched"
+        >
           {{ "CONTACT.FORM.ERRORS.EMAIL_INVALID" | translate }}
         </span>
       </div>
@@ -76,7 +97,9 @@
 
     <!-- MESSAGE -->
     <div class="input-label textarea-label">
-      <label for="message">{{ "CONTACT.FORM.MESSAGE_LABEL" | translate }}</label>
+      <label for="message">{{
+        "CONTACT.FORM.MESSAGE_LABEL" | translate
+      }}</label>
       <textarea
         [(ngModel)]="contactData.message"
         name="message"
@@ -86,10 +109,16 @@
         placeholder="{{ 'CONTACT.FORM.MESSAGE_PLACEHOLDER' | translate }}"
         #message="ngModel"
       ></textarea>
-      <span class="error-msg" *ngIf="message.errors?.['required'] && message.touched">
+      <span
+        class="error-msg"
+        *ngIf="message.errors?.['required'] && message.touched"
+      >
         {{ "CONTACT.FORM.ERRORS.MESSAGE_REQUIRED" | translate }}
       </span>
-      <span class="error-msg" *ngIf="message.errors?.['minlength'] && message.touched">
+      <span
+        class="error-msg"
+        *ngIf="message.errors?.['minlength'] && message.touched"
+      >
         {{ "CONTACT.FORM.ERRORS.MESSAGE_MINLENGTH" | translate }}
       </span>
     </div>
@@ -108,22 +137,28 @@
         />
 
         <label for="privacy">
-          <span class="checkbox-image"
+          <span
+            class="checkbox-image"
             [ngClass]="{
-              'checked': privacyAccepted,
-              'error': (privacy.invalid && (privacy.touched || contactForm.submitted))
+              checked: privacyAccepted,
+              error:
+                privacy.invalid && (privacy.touched || contactForm.submitted)
             }"
           ></span>
 
           <span class="privacy-text">
             {{ "CONTACT.FORM.PRIVACY_TEXT" | translate }}
-            <a href="/privacy-policy" target="_blank">{{ "CONTACT.FORM.PRIVACY_LINK" | translate }}</a>
+            <a href="/privacy-policy" target="_blank">{{
+              "CONTACT.FORM.PRIVACY_LINK" | translate
+            }}</a>
             {{ "CONTACT.FORM.PRIVACY_CONTINUE" | translate }}
           </span>
-          
         </label>
 
-        <span class="error-msg" *ngIf="privacy.invalid && (privacy.touched || contactForm.submitted)">
+        <span
+          class="error-msg"
+          *ngIf="privacy.invalid && (privacy.touched || contactForm.submitted)"
+        >
           {{ "CONTACT.FORM.ERRORS.PRIVACY" | translate }}
         </span>
       </div>
@@ -138,7 +173,6 @@
       </button>
     </div>
 
-
     <div class="arrowUp-2">
       <span *ngFor="let scroll of scrollIcons">
         <img
@@ -150,8 +184,5 @@
         />
       </span>
     </div>
-
-
-
   </form>
 </section>

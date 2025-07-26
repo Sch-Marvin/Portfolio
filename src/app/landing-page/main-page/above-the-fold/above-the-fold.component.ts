@@ -82,10 +82,6 @@ export class AboveTheFoldComponent implements OnInit {
     }
   }
 
-
-
-
-
   menuOpen = true;
   isMobileView = false;
 
