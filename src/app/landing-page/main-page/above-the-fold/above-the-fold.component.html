@@ -125,14 +125,17 @@
 
         <div class="contact-icons">
           <span *ngFor="let icon of contactIcons">
-            <img
-              [src]="icon.current"
-              (mouseenter)="onContactHover(icon.id)"
-              (mouseleave)="onContactLeave(icon.id)"
-              [alt]="icon.id + ' icon'"
-            />
+            <a [href]="icon.url" target="_blank" rel="noopener noreferrer">
+              <img
+                [src]="icon.current"
+                (mouseenter)="onContactHover(icon.id)"
+                (mouseleave)="onContactLeave(icon.id)"
+                [alt]="icon.id + ' icon'"
+              />
+            </a>
           </span>
         </div>
+        
       </div>
 
       <div class="name-Section">

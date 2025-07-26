@@ -70,7 +70,7 @@ export class ContactMeComponent {
     {
       id: 'EMail',
       default: '../../../../assets/icon/Contact/contact_email.svg',
-      hover: '../../../../assets/icon/Contact/E-Mail-hover.svg',
+      hover: '../../../../assets/icon/Contact/E-Mail-hover.PNG',
       current: '../../../../assets/icon/Contact/contact_email.svg'
     },
   ];

@@ -22,20 +22,24 @@ export class AboveTheFoldComponent implements OnInit {
       default: '../../../../assets/icon/Email button.png',
       hover: '../../../../assets/icon/Property 1=hover blue E-Mail.png',
       current: '../../../../assets/icon/Email button.png',
+      url: 'mailto:marvinschneemann@gmx.de'
     },
     {
       id: 'github',
       default: '../../../../assets/icon/Github button.png',
       hover: '../../../../assets/icon/Property 1=hover blue Github.png',
       current: '../../../../assets/icon/Github button.png',
+      url: 'https://github.com/Sch-Marvin'
     },
     {
       id: 'linkedin',
       default: '../../../../assets/icon/Linkedin button.png',
       hover: '../../../../assets/icon/Property 1=hover blue Linkedin.png',
       current: '../../../../assets/icon/Linkedin button.png',
+      url: 'https://www.linkedin.com/in/deinProfilname'
     },
   ];
+  
 
   scrollIcons = [
     {
