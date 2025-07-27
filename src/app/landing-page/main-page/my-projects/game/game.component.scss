@@ -326,6 +326,11 @@ button {
 }
 
 @media (max-width: 550px) {
+
+  section{
+    height: 980px;
+  }
+
   .secend-section {
     width: 320px;
   }
@@ -401,8 +406,8 @@ button {
     }
   }
 
-  .icons-2{
-    .icon-img{
+  .icons-2 {
+    .icon-img {
       width: 22px;
       height: 22px;
     }
