@@ -2,75 +2,84 @@
   display: flex;
   justify-content: center;
 
-  .feedback-card {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-
-    h3,
-    h5,
-    .project-name,
-    a {
-      position: relative;
-      z-index: 2; // Inhalte über den Bildern
-    }
-
-    &:hover {
-      .feedback-card-one {
-        opacity: 0;
-      }
-
-      .feedback-card-two {
-        opacity: 1;
-      }
-    }
-  }
-
   .secend-Overlay {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    max-width: 100%;
-  }
+    width: 100%;
+    padding: 1rem;
+    cursor: grab;
 
-  .secend-Overlay::-webkit-scrollbar {
-    display: none;
-  }
+    &.active {
+      cursor: grabbing;
+      user-select: none;
+    }
 
-  .feedback-card-one,
-  .feedback-card-two {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background-image: url("../../../../assets/icon/Ellipse 02.png");
-    background-position: center bottom;
-    background-size: cover;
-    border-radius: 100%;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 1;
-  }
+    .feedback-scroll-container {
+      display: flex;
+      gap: 2rem;
+      width: max-content;
 
-  .feedback-card-one {
-    transform: rotate(15deg);
-    opacity: 1;
-  }
+      .feedback-card {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-  .feedback-card-two {
-    transform: rotate(35deg);
-    opacity: 0;
+        h3,
+        h5,
+        .project-name,
+        a {
+          position: relative;
+          z-index: 2;
+        }
+
+        &:hover {
+          .feedback-card-one {
+            opacity: 0;
+          }
+
+          .feedback-card-two {
+            opacity: 1;
+          }
+        }
+
+        .feedback-card-one,
+        .feedback-card-two {
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          background-image: url("../../../../assets/icon/Ellipse 02.png");
+          background-position: center bottom;
+          background-size: cover;
+          border-radius: 100%;
+          transition: opacity 0.5s ease-in-out;
+          z-index: 1;
+        }
+
+        .feedback-card-one {
+          transform: rotate(15deg);
+          opacity: 1;
+        }
+
+        .feedback-card-two {
+          transform: rotate(35deg);
+          opacity: 0;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
-// Global Typography
 h2 {
   padding-top: 79px;
   padding-bottom: 56px;
@@ -127,91 +136,72 @@ a {
   }
 }
 
-// Embla Styles
-.embla {
-  overflow: hidden;
-  width: 100%;
-}
+@media (max-width: 1000px) {
+  .feedback-card {
+    width: 300px;
+    height: 300px;
+  }
 
-.embla__viewport {
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-.embla__container {
-  display: flex;
-  gap: 2rem;
-  width: max-content; // WICHTIG: damit alles nebeneinander passt
-  flex-wrap: nowrap;
-}
-
-.embla__slide {
-  flex: 0 0 auto;
-}
-
-// Media Queries
-@media (max-width: 1270px) {
-  .overlay .feedback-card-one,
-  .overlay .feedback-card-two {
-    width: 320px;
-    height: 320px;
+  .feedback-card-one,
+  .feedback-card-two {
+    width: 300px;
+    height: 300px;
   }
 
   .overlay .secend-Overlay {
-    height: 411px;
+    height: 435px;
   }
 }
 
-@media (max-width: 1150px) {
-  .overlay .feedback-card {
-    width: 315px;
+@media (max-width: 600px) {
+  .feedback-card {
+    width: 260px;
+    height: 260px;
+  }
+
+  .feedback-card-one,
+  .feedback-card-two {
+    width: 260px;
+    height: 260px;
   }
 
   .overlay .secend-Overlay {
-    height: 411px;
-  }
-
-  .embla__container {
+    height: 435px;
     gap: 1rem;
   }
 }
 
-@media (max-width: 1000px) {
-  .overlay .feedback-card {
-    flex: 0 0 38%;
-    min-width: 280px;
-    width: auto;
+@media (max-width: 500px) {
+  .feedback-scroll-container {
+    gap: 0 !important;
+  }
+  h3 {
+    font-size: 24px;
+    width: 207px;
+  }
+  h5 {
+    padding-bottom: 5px;
+    width: 210px;
+  }
+  .feedback-card-one,
+  .feedback-card-two {
+    width: 300px !important;
+    height: 325px !important;
+    transform: rotate(80deg) !important;
+  }
+  p {
+    padding-right: 0;
+    text-align: left;
+    width: 206px;
+    height: 90px;
   }
 
-  .overlay .feedback-card-one,
-  .overlay .feedback-card-two {
-    width: 320px;
-    height: 320px;
-  }
-
-  .overlay .secend-Overlay {
-    height: 411px;
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 850px) {
-  .overlay .feedback-card {
-    flex: 0 0 80%;
-    min-width: 280px;
-    width: auto;
-  }
-
-  .overlay .feedback-card-one,
-  .overlay .feedback-card-two {
-    width: 320px;
-    height: 320px;
+  .feedback-card {
+    width: 310px;
   }
 
   .overlay .secend-Overlay {
-    height: 411px;
-    gap: 2rem;
+    height: 435px;
+    gap: 1rem;
   }
 }
