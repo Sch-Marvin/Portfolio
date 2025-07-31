@@ -36,6 +36,7 @@ span {
   font-family: "JS Bold";
   padding-right: 5px;
 }
+
 p {
   font-family: "JS Medium";
   text-align: justify;
@@ -47,8 +48,6 @@ p {
   padding: 0 20px;
   hyphens: auto;
   word-break: break-word;
-
-
 }
 
 .section-image {
@@ -70,7 +69,6 @@ img {
   font-size: 1.5rem;
   font-weight: 400;
   color: #fff;
-  margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
 }
@@ -81,6 +79,14 @@ img {
 }
 
 .about-me-text {
+  max-width: 379px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+}
+
+
+.about-me-text p {
   max-width: 379px;
   font-size: 1rem;
   line-height: 1.6;
